@@ -44,6 +44,7 @@
                     <a href="index.html" class="nav-link active">Gallery</a>
                     <a href="lineage.html" class="nav-link">Lineage</a>
                     <a href="origins.html" class="nav-link">Origins</a>
+                    <a href="honorable-mentions.html" class="nav-link">Honorable Mentions</a>
                 </div>
             </div>
         </div>
@@ -103,6 +104,39 @@
             </div>
         </div>
     </main>
+
+    <!-- Email Signup Section -->
+    <section class="email-signup">
+        <div class="container">
+            <div class="signup-content">
+                <h2 class="signup-title">Get Notified About the Book</h2>
+                <p class="signup-description">
+                    We're launching a coffee-table book: <strong>"10000000 Ways to Say Hello"</strong> (128 languages in binary!)<br>
+                    Be the first to know when our Kickstarter campaign launches.
+                </p>
+
+                <!-- Mailchimp Form - Replace action URL with your Mailchimp endpoint -->
+                <form class="signup-form" action="https://YOUR-MAILCHIMP-URL.us1.list-manage.com/subscribe/post" method="POST" target="_blank">
+                    <!-- Replace with your Mailchimp u and id values -->
+                    <input type="hidden" name="u" value="YOUR_USER_ID">
+                    <input type="hidden" name="id" value="YOUR_LIST_ID">
+
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            name="EMAIL"
+                            class="email-input"
+                            placeholder="your@email.com"
+                            required
+                            aria-label="Email address"
+                        >
+                        <button type="submit" class="submit-btn">Notify Me</button>
+                    </div>
+                    <p class="privacy-note">We respect your privacy. Unsubscribe anytime. No spam, just book updates.</p>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
