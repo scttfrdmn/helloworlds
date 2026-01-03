@@ -115,16 +115,18 @@
                     Be the first to know when our Kickstarter campaign launches.
                 </p>
 
-                <!-- Mailchimp Form - Replace action URL with your Mailchimp endpoint -->
-                <form class="signup-form" action="https://YOUR-MAILCHIMP-URL.us1.list-manage.com/subscribe/post" method="POST" target="_blank">
-                    <!-- Replace with your Mailchimp u and id values -->
-                    <input type="hidden" name="u" value="YOUR_USER_ID">
-                    <input type="hidden" name="id" value="YOUR_LIST_ID">
-
+                <!-- Buttondown Form - Get your username from https://buttondown.email/settings -->
+                <form
+                    class="signup-form"
+                    action="https://buttondown.email/api/emails/embed-subscribe/YOUR_USERNAME"
+                    method="post"
+                    target="popupwindow"
+                    onsubmit="window.open('https://buttondown.email/YOUR_USERNAME', 'popupwindow')"
+                >
                     <div class="form-group">
                         <input
                             type="email"
-                            name="EMAIL"
+                            name="email"
                             class="email-input"
                             placeholder="your@email.com"
                             required
