@@ -1,0 +1,71 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffed4e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect for nodes -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#goldGradient)"/>
+
+  <!-- Decorative connection lines (like a graph) -->
+  <g opacity="0.2" stroke="#ffd700" stroke-width="2" fill="none">
+    <path d="M 200 250 Q 300 200, 400 250" />
+    <path d="M 400 250 Q 500 300, 600 250" />
+    <path d="M 600 250 Q 700 200, 800 250" />
+    <path d="M 800 250 Q 900 300, 1000 250" />
+    <path d="M 300 350 Q 400 400, 500 350" />
+    <path d="M 700 350 Q 800 400, 900 350" />
+  </g>
+
+  <!-- Node circles representing languages -->
+  <g opacity="0.4">
+    <circle cx="200" cy="250" r="15" fill="url(#nodeGlow)"/>
+    <circle cx="400" cy="250" r="20" fill="url(#nodeGlow)"/>
+    <circle cx="600" cy="250" r="25" fill="url(#nodeGlow)"/>
+    <circle cx="800" cy="250" r="20" fill="url(#nodeGlow)"/>
+    <circle cx="1000" cy="250" r="15" fill="url(#nodeGlow)"/>
+    <circle cx="300" cy="350" r="12" fill="#00d9ff" opacity="0.6"/>
+    <circle cx="500" cy="350" r="12" fill="#00d9ff" opacity="0.6"/>
+    <circle cx="700" cy="350" r="12" fill="#00d9ff" opacity="0.6"/>
+    <circle cx="900" cy="350" r="12" fill="#00d9ff" opacity="0.6"/>
+  </g>
+
+  <!-- Logo -->
+  <text x="600" y="140" font-family="Georgia, serif" font-size="52" font-weight="900" fill="#e8e8f0" text-anchor="middle" letter-spacing="-1">
+    hello<tspan fill="#ffd700">worlds</tspan>.io
+  </text>
+
+  <!-- Main title -->
+  <text x="600" y="450" font-family="Georgia, serif" font-size="64" font-weight="900" text-anchor="middle">
+    <tspan fill="url(#accentGradient)">Language Lineage</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="510" font-family="Arial, sans-serif" font-size="28" fill="#e8e8f0" text-anchor="middle" font-weight="300">
+    The Family Tree of Programming
+  </text>
+
+  <!-- Description -->
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="22" fill="#9a9aa8" text-anchor="middle">
+    Explore how 134 languages influenced each other through 75 years
+  </text>
+
+  <!-- Bottom accent bar -->
+  <rect x="350" y="595" width="500" height="3" fill="url(#accentGradient)" rx="1.5"/>
+</svg>

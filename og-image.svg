@@ -1,0 +1,67 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffed4e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#goldGradient)"/>
+
+  <!-- Decorative grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="157.5" x2="1200" y2="157.5" stroke="#ffd700" stroke-width="1"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#ffd700" stroke-width="1"/>
+    <line x1="0" y1="472.5" x2="1200" y2="472.5" stroke="#ffd700" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#ffd700" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#ffd700" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#ffd700" stroke-width="1"/>
+  </g>
+
+  <!-- Logo -->
+  <text x="600" y="180" font-family="Georgia, serif" font-size="72" font-weight="900" fill="#e8e8f0" text-anchor="middle" letter-spacing="-2">
+    hello<tspan fill="#ffd700">worlds</tspan>.io
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="28" fill="#9a9aa8" text-anchor="middle" font-weight="300">
+    A Curated Collection of "Hello, World!" Programs
+  </text>
+
+  <!-- Main number -->
+  <text x="600" y="360" font-family="Georgia, serif" font-size="120" font-weight="900" text-anchor="middle">
+    <tspan fill="url(#accentGradient)">134</tspan>
+  </text>
+
+  <!-- Languages text -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="36" fill="#e8e8f0" text-anchor="middle" font-weight="600">
+    Programming Languages
+  </text>
+
+  <!-- Timeline -->
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="24" fill="#9a9aa8" text-anchor="middle">
+    1949 — 2024 • 75 Years of Programming History
+  </text>
+
+  <!-- Bottom accent bar -->
+  <rect x="300" y="550" width="600" height="4" fill="url(#accentGradient)" rx="2"/>
+
+  <!-- Small code snippet decoration -->
+  <g opacity="0.3">
+    <text x="120" y="580" font-family="Courier, monospace" font-size="18" fill="#ffd700">
+      print("Hello, World!")
+    </text>
+    <text x="850" y="580" font-family="Courier, monospace" font-size="18" fill="#00d9ff">
+      console.log("Hello")
+    </text>
+  </g>
+</svg>
