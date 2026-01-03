@@ -167,7 +167,7 @@ body {
     font-family: var(--font-display);
     font-size: clamp(4rem, 15vw, 12rem);
     font-weight: 900;
-    line-height: 0.9;
+    line-height: 1.05;
     margin-bottom: var(--spacing-md);
     position: relative;
 }
@@ -180,16 +180,17 @@ body {
 
 .title-line:nth-child(1) {
     animation: slideUp 1s var(--transition-smooth) 0.3s forwards;
-    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent-soft) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text);
 }
 
 .title-line:nth-child(2) {
     animation: slideUp 1s var(--transition-smooth) 0.5s forwards;
     font-style: italic;
     color: var(--color-text);
+}
+
+.title-accent {
+    color: var(--color-accent) !important;
 }
 
 .hero-subtitle {
