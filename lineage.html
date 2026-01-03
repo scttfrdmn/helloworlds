@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Lineage - helloworlds.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lineage-styles.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <a href="index.html">hello<span>worlds</span></a>
+                </h1>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Gallery</a>
+                    <a href="lineage.html" class="nav-link active">Lineage</a>
+                    <a href="origins.html" class="nav-link">Origins</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="intro">
+            <h2 class="intro-title">The Family Tree of Programming</h2>
+            <p class="intro-text">Every language stands on the shoulders of giants. Explore the genealogy of programming languages—from Fortran's pioneering vision to modern innovations.</p>
+            <div class="controls">
+                <button class="control-btn" id="resetView">Reset View</button>
+                <button class="control-btn" id="togglePhysics">Pause Physics</button>
+                <label class="control-label">
+                    <input type="checkbox" id="showLabels" checked>
+                    <span>Show Labels</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="graph-container">
+            <svg id="lineage-graph"></svg>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+
+        <div class="legend">
+            <h3>Era Timeline</h3>
+            <div class="legend-items">
+                <div class="legend-item"><span class="era-dot era-1950s"></span> 1950s-1960s: Dawn</div>
+                <div class="legend-item"><span class="era-dot era-1970s"></span> 1970s: Revolution</div>
+                <div class="legend-item"><span class="era-dot era-1980s"></span> 1980s: Expansion</div>
+                <div class="legend-item"><span class="era-dot era-1990s"></span> 1990s: Internet Age</div>
+                <div class="legend-item"><span class="era-dot era-2000s"></span> 2000s: Modern Era</div>
+                <div class="legend-item"><span class="era-dot era-2010s"></span> 2010s+: Innovation</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Hover over nodes to explore connections • Click and drag to rearrange • Scroll to zoom</p>
+        </div>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="languages.js"></script>
+    <script src="lineage.js"></script>
+</body>
+</html>
