@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloworlds.io - A Curated Collection of Hello World Programs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <h1 class="logo">hello<span>worlds</span></h1>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Gallery</a>
+                    <a href="lineage.html" class="nav-link">Lineage</a>
+                    <a href="origins.html" class="nav-link">Origins</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-label">An Archive of First Expressions</div>
+            <h1 class="hero-title">
+                <span class="title-line">Hello,</span>
+                <span class="title-line">Worlds</span>
+            </h1>
+            <p class="hero-subtitle">Every programming language's first whisper—collected, preserved, and celebrated.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="12">0</span>
+                    <span class="stat-label">Paradigms</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1988">0</span>
+                    <span class="stat-label">Est.</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Explore</span>
+        </div>
+    </header>
+
+    <nav class="filter-bar">
+        <div class="container">
+            <input type="text" id="search" class="search-input" placeholder="Search languages...">
+            <div class="filter-tags">
+                <button class="filter-tag active" data-filter="all">All</button>
+                <button class="filter-tag" data-filter="compiled">Compiled</button>
+                <button class="filter-tag" data-filter="interpreted">Interpreted</button>
+                <button class="filter-tag" data-filter="functional">Functional</button>
+                <button class="filter-tag" data-filter="oop">Object-Oriented</button>
+                <button class="filter-tag" data-filter="esoteric">Esoteric</button>
+                <button class="filter-tag" data-filter="web">Web</button>
+                <button class="filter-tag" data-filter="system">Systems</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="gallery">
+        <div class="container">
+            <div class="languages-grid" id="languagesGrid">
+                <!-- Languages will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Project</h3>
+                    <p>A love letter to programming languages, celebrating the tradition of "Hello, World!" as the gateway to every developer's journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contribute</h3>
+                    <p>Know a language we're missing? Submit a pull request on GitHub and help us grow this collection.</p>
+                    <a href="#" class="footer-link">GitHub Repository →</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Stats</h3>
+                    <p><span class="footer-highlight">50+</span> languages and counting<br>
+                       <span class="footer-highlight">Open Source</span> and community-driven<br>
+                       Built with ♥ for developers</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 helloworlds.io - Celebrating the art of first programs</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
