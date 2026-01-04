@@ -262,7 +262,7 @@ function updateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
     statNumbers[0].dataset.count = totalLanguages;
     statNumbers[1].dataset.count = uniqueParadigms.size;
-    statNumbers[2].dataset.count = earliestYear;
+    // Skip statNumbers[2] - it's the year span with static text "1949-2024"
 }
 
 // Shuffle array using Fisher-Yates algorithm
