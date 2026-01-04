@@ -236,9 +236,12 @@ document.querySelector('.scroll-indicator').addEventListener('click', () => {
 // Initialize stats counters on load
 window.addEventListener('load', () => {
     document.querySelectorAll('.stat-number').forEach(element => {
-        setTimeout(() => {
-            animateCounter(element);
-        }, 1000);
+        // Only animate if element has data-count attribute
+        if (element.dataset.count) {
+            setTimeout(() => {
+                animateCounter(element);
+            }, 1000);
+        }
     });
 });
 
