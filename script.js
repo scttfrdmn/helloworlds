@@ -356,7 +356,6 @@ window.addEventListener('load', () => {
 
 // Update stats based on actual data
 function updateStats() {
-    const totalLanguages = languages.length;
     const uniqueParadigms = new Set();
     let earliestYear = Infinity;
 
@@ -369,7 +368,8 @@ function updateStats() {
 
     // Update the counters with actual values
     const statNumbers = document.querySelectorAll('.stat-number');
-    statNumbers[0].dataset.count = totalLanguages;
+    // Keep language count at 128 (don't override with languages.length)
+    statNumbers[0].dataset.count = 128;
     statNumbers[1].dataset.count = uniqueParadigms.size;
     // Skip statNumbers[2] - it's the year span with static text "1949-2024"
 }
