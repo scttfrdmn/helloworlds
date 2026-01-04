@@ -29,7 +29,40 @@ function renderLanguages(languagesToRender) {
                 </div>
             `;
         }
-        
+
+        // Relationships section
+        let relationshipsHTML = '';
+        if ((lang.influences && lang.influences.length > 0) || (lang.influenced && lang.influenced.length > 0)) {
+            let influencesHTML = '';
+            let influencedHTML = '';
+
+            if (lang.influences && lang.influences.length > 0) {
+                const influenceLinks = lang.influences.map(name =>
+                    `<span class="lang-link" data-lang="${name}">${name}</span>`
+                ).join(', ');
+                influencesHTML = `<div class="relationship-group"><strong>Influenced by:</strong> ${influenceLinks}</div>`;
+            }
+
+            if (lang.influenced && lang.influenced.length > 0) {
+                const influencedLinks = lang.influenced.map(name =>
+                    `<span class="lang-link" data-lang="${name}">${name}</span>`
+                ).join(', ');
+                influencedHTML = `<div class="relationship-group"><strong>Influenced:</strong> ${influencedLinks}</div>`;
+            }
+
+            relationshipsHTML = `
+                <div class="language-relationships">
+                    <button class="relationships-toggle">
+                        <span class="toggle-icon">▶</span> Show Relationships
+                    </button>
+                    <div class="relationships-content">
+                        ${influencesHTML}
+                        ${influencedHTML}
+                    </div>
+                </div>
+            `;
+        }
+
         card.innerHTML = `
             <div class="language-header">
                 <div class="language-info">
@@ -49,17 +82,43 @@ function renderLanguages(languagesToRender) {
             </div>
             <div class="language-description">${lang.description}</div>
             ${authorHTML}
+            ${relationshipsHTML}
         `;
         
         grid.appendChild(card);
     });
-    
+
     // Re-highlight code blocks
     setTimeout(() => {
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
         });
     }, 50);
+
+    // Add event listeners for relationship toggles
+    document.querySelectorAll('.relationships-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.toggle-icon');
+            const isOpen = content.style.display === 'block';
+
+            content.style.display = isOpen ? 'none' : 'block';
+            icon.textContent = isOpen ? '▶' : '▼';
+            button.innerHTML = `<span class="toggle-icon">${isOpen ? '▶' : '▼'}</span> ${isOpen ? 'Show' : 'Hide'} Relationships`;
+        });
+    });
+
+    // Add event listeners for language links
+    document.querySelectorAll('.lang-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const langName = link.dataset.lang;
+            const searchInput = document.getElementById('search');
+            searchInput.value = langName;
+            currentSearch = langName;
+            filterLanguages();
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    });
 }
 
 // Get appropriate language class for syntax highlighting
