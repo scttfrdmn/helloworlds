@@ -469,11 +469,16 @@ document.getElementById('resetBtn')?.addEventListener('click', () => {
     // Re-render with original order
     filterLanguages();
 
-    // Scroll to the very top of the page
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    // Scroll to the gallery section (just below the sticky filter bar)
+    setTimeout(() => {
+        const gallery = document.querySelector('.gallery');
+        if (gallery) {
+            gallery.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 100);
 });
 
 // Initial render with randomized order
