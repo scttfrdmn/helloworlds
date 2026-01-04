@@ -304,14 +304,15 @@ searchClear.addEventListener('click', () => {
 // Animated counter for stats
 function animateCounter(element) {
     const target = parseInt(element.dataset.count);
+    const showPlus = element.dataset.showPlus === 'true';
     const duration = 2000;
     const step = target / (duration / 16);
     let current = 0;
-    
+
     const timer = setInterval(() => {
         current += step;
         if (current >= target) {
-            element.textContent = target;
+            element.textContent = showPlus ? target + '+' : target;
             clearInterval(timer);
         } else {
             element.textContent = Math.floor(current);
