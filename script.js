@@ -223,13 +223,46 @@ function filterLanguages() {
         );
     }
 
-    // Apply search filter
+    // Apply search filter with relevance scoring
     if (currentSearch) {
+        const searchLower = currentSearch.toLowerCase();
+
+        // Filter and score matches
         filtered = filtered.filter(lang =>
-            lang.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-            lang.description.toLowerCase().includes(currentSearch.toLowerCase()) ||
-            lang.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()))
-        );
+            lang.name.toLowerCase().includes(searchLower) ||
+            lang.description.toLowerCase().includes(searchLower) ||
+            lang.tags.some(tag => tag.toLowerCase().includes(searchLower))
+        ).map(lang => {
+            let score = 0;
+            const nameLower = lang.name.toLowerCase();
+
+            // Exact name match (highest priority)
+            if (nameLower === searchLower) {
+                score = 1000;
+            }
+            // Name starts with search (very high priority)
+            else if (nameLower.startsWith(searchLower)) {
+                score = 500;
+            }
+            // Name contains search (high priority)
+            else if (nameLower.includes(searchLower)) {
+                score = 100;
+            }
+            // Tag match (medium priority)
+            else if (lang.tags.some(tag => tag.toLowerCase().includes(searchLower))) {
+                score = 50;
+            }
+            // Description match (low priority)
+            else if (lang.description.toLowerCase().includes(searchLower)) {
+                score = 10;
+            }
+
+            return { lang, score };
+        })
+        // Sort by score (highest first)
+        .sort((a, b) => b.score - a.score)
+        // Extract just the language objects
+        .map(item => item.lang);
     }
 
     renderLanguages(filtered);
