@@ -469,13 +469,15 @@ document.getElementById('resetBtn')?.addEventListener('click', () => {
     // Re-render with original order
     filterLanguages();
 
-    // Scroll to show filter bar at top with cards visible below
+    // Scroll to position where sticky header and filter bar are at top
     setTimeout(() => {
-        const filterBar = document.querySelector('.filter-bar');
-        if (filterBar) {
-            const filterBarTop = filterBar.offsetTop;
+        const mainNav = document.querySelector('.main-nav');
+        if (mainNav) {
+            // Get the height of the sticky header
+            const navHeight = mainNav.offsetHeight;
+            // Scroll to just past the header so filter bar sticks at top
             window.scrollTo({
-                top: filterBarTop,
+                top: navHeight + 1,
                 behavior: 'smooth'
             });
         }
