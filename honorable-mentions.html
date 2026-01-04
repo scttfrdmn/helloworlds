@@ -184,7 +184,8 @@
     <section style="padding: var(--spacing-lg) 0; text-align: center; border-bottom: 1px solid var(--color-border);">
         <div class="container">
             <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; margin-bottom: var(--spacing-sm); background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent-soft) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Honorable Mentions</h1>
-            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--color-text-dim); max-width: 700px; margin: 0 auto 1.5rem;">Languages that didn't make the main collection, but deserve recognition</p>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--color-text-dim); max-width: none; margin: 0 auto 0.5rem; white-space: nowrap;">Languages that didn't make the main collection, but deserve recognition</p>
+            <p style="font-size: clamp(0.9rem, 2vw, 1rem); color: var(--color-text-dim); opacity: 0.8; max-width: 800px; margin: 0 auto 1.5rem;">To qualify for the main gallery, a Hello World must use a distinct, general-purpose language that's stable, released, and actively used—not a variant, dialect, or platform-specific tool.</p>
 
             <details style="max-width: 800px; margin: 0 auto; text-align: left; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--color-border); border-radius: 8px; padding: 1rem;">
                 <summary style="cursor: pointer; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; color: var(--color-accent); list-style: none; display: flex; align-items: center; gap: 0.5rem;">
@@ -634,12 +635,12 @@
                             <span style="color: var(--color-text);">${mention.creator}</span>
                         </div>
                         <div style="margin-bottom: 0.75rem;">
-                            <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Why not included:</strong>
-                            <span style="color: var(--color-text);">${mention.reason}</span>
-                        </div>
-                        <div>
                             <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Why notable:</strong>
                             <span style="color: var(--color-text);">${mention.notable}</span>
+                        </div>
+                        <div>
+                            <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Why not included:</strong>
+                            <span style="color: var(--color-text);">${mention.reason}</span>
                         </div>
                     </div>
                 `;
