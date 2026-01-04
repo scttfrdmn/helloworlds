@@ -86,12 +86,12 @@ body {
 
 .nav {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
 .nav-link {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-dim);
