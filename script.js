@@ -150,17 +150,18 @@ function copyCode(button) {
 // Filtering
 let currentFilter = 'all';
 let currentSearch = '';
+let currentLanguageOrder = [];
 
 function filterLanguages() {
-    let filtered = languages;
-    
+    let filtered = currentLanguageOrder.length > 0 ? currentLanguageOrder : languages;
+
     // Apply tag filter
     if (currentFilter !== 'all') {
-        filtered = filtered.filter(lang => 
+        filtered = filtered.filter(lang =>
             lang.tags.includes(currentFilter)
         );
     }
-    
+
     // Apply search filter
     if (currentSearch) {
         filtered = filtered.filter(lang =>
@@ -169,7 +170,7 @@ function filterLanguages() {
             lang.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()))
         );
     }
-    
+
     renderLanguages(filtered);
 }
 
@@ -246,14 +247,14 @@ function updateStats() {
     const totalLanguages = languages.length;
     const uniqueParadigms = new Set();
     let earliestYear = Infinity;
-    
+
     languages.forEach(lang => {
         lang.tags.forEach(tag => uniqueParadigms.add(tag));
         if (lang.year < earliestYear) {
             earliestYear = lang.year;
         }
     });
-    
+
     // Update the counters with actual values
     const statNumbers = document.querySelectorAll('.stat-number');
     statNumbers[0].dataset.count = totalLanguages;
@@ -261,9 +262,85 @@ function updateStats() {
     statNumbers[2].dataset.count = earliestYear;
 }
 
-// Initial render
+// Shuffle array using Fisher-Yates algorithm
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Get or create randomized language order
+function getLanguageOrder() {
+    const savedOrder = localStorage.getItem('language-order');
+    const orderLocked = localStorage.getItem('order-locked') === 'true';
+
+    if (savedOrder && orderLocked) {
+        // Use saved order
+        try {
+            const orderIndices = JSON.parse(savedOrder);
+            return orderIndices.map(i => languages[i]).filter(lang => lang);
+        } catch (e) {
+            console.error('Failed to load saved order:', e);
+        }
+    }
+
+    // Create new randomized order
+    const shuffled = shuffleArray(languages);
+    const indices = shuffled.map(lang => languages.indexOf(lang));
+    localStorage.setItem('language-order', JSON.stringify(indices));
+    return shuffled;
+}
+
+// Order control functionality
+function updateOrderControlButton() {
+    const btn = document.getElementById('orderControlBtn');
+    const isLocked = localStorage.getItem('order-locked') === 'true';
+
+    if (isLocked) {
+        btn.classList.add('locked');
+        btn.querySelector('.btn-icon').textContent = '🔒';
+        btn.querySelector('.btn-text').textContent = 'Unlock Order';
+    } else {
+        btn.classList.remove('locked');
+        btn.querySelector('.btn-icon').textContent = '🔀';
+        btn.querySelector('.btn-text').textContent = 'Shuffle Order';
+    }
+}
+
+function shuffleOrder() {
+    const shuffled = shuffleArray(languages);
+    const indices = shuffled.map(lang => languages.indexOf(lang));
+    localStorage.setItem('language-order', JSON.stringify(indices));
+    localStorage.setItem('order-locked', 'false');
+    currentLanguageOrder = shuffled;
+    updateOrderControlButton();
+    filterLanguages();
+}
+
+function toggleOrderLock() {
+    const isLocked = localStorage.getItem('order-locked') === 'true';
+    localStorage.setItem('order-locked', (!isLocked).toString());
+    updateOrderControlButton();
+}
+
+// Set up order control button
+document.getElementById('orderControlBtn')?.addEventListener('click', () => {
+    const isLocked = localStorage.getItem('order-locked') === 'true';
+    if (isLocked) {
+        toggleOrderLock();
+    } else {
+        shuffleOrder();
+    }
+});
+
+// Initial render with randomized order
 updateStats();
-renderLanguages(languages);
+currentLanguageOrder = getLanguageOrder();
+renderLanguages(currentLanguageOrder);
+updateOrderControlButton();
 
 // Add keyboard shortcuts
 document.addEventListener('keydown', (e) => {
@@ -282,7 +359,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Add parallax effect to hero on scroll
+// Add parallax effect to hero on scroll and fade explore indicator
 let ticking = false;
 
 window.addEventListener('scroll', () => {
@@ -290,10 +367,23 @@ window.addEventListener('scroll', () => {
         window.requestAnimationFrame(() => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero-content');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+
             if (hero && scrolled < window.innerHeight) {
                 hero.style.transform = `translateY(${scrolled * 0.5}px)`;
                 hero.style.opacity = 1 - (scrolled / window.innerHeight);
             }
+
+            // Fade out scroll indicator quickly when scrolling starts
+            if (scrollIndicator) {
+                if (scrolled > 50) {
+                    scrollIndicator.style.opacity = '0';
+                    scrollIndicator.style.transition = 'opacity 0.3s ease';
+                } else {
+                    scrollIndicator.style.opacity = '1';
+                }
+            }
+
             ticking = false;
         });
         ticking = true;

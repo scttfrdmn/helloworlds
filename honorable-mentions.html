@@ -26,68 +26,6 @@
 
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Navigation Bar */
-        nav {
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #e8e8f0;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: #ffd700;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #e8e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        .nav-links a.active {
-            color: #ffd700;
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #ffd700;
-        }
 
         .honorable-container {
             max-width: 1200px;
@@ -275,14 +213,16 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo">hello,<span>worlds</span>.io</div>
-            <div class="nav-links">
-                <a href="index.html">Gallery</a>
-                <a href="lineage.html">Lineage</a>
-                <a href="origins.html">Origins</a>
-                <a href="honorable-mentions.html" class="active">Honorable Mentions</a>
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <h1 class="logo">hello,<span>worlds</span></h1>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Gallery</a>
+                    <a href="lineage.html" class="nav-link">Lineage</a>
+                    <a href="origins.html" class="nav-link">Origins</a>
+                    <a href="honorable-mentions.html" class="nav-link active">Honorable Mentions</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -1969,9 +1909,9 @@
             // Check if user has identified themselves
             let userIdentity = localStorage.getItem('voter-identity');
             if (!userIdentity) {
-                userIdentity = prompt('To vote, please enter your GitHub username or email:');
+                userIdentity = prompt('To vote, please identify yourself with your GitHub or Google username:');
                 if (!userIdentity || userIdentity.trim() === '') {
-                    alert('You must identify yourself to vote. This helps prevent spam.');
+                    alert('Authentication required. Please provide your GitHub or Google username to vote.');
                     return;
                 }
                 localStorage.setItem('voter-identity', userIdentity.trim());
@@ -2010,5 +1950,10 @@
             });
         });
     </script>
+
+    <footer style="background: var(--color-bg-elevated); border-top: 1px solid var(--color-border); padding: 2rem; text-align: center; color: var(--color-text-dim); font-family: var(--font-mono); font-size: 0.85rem; margin-top: 4rem;">
+        <p>© 2026 helloworlds.io - Celebrating the art of first programs</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.7;">Privacy: This site uses browser localStorage to save your voting activity and identity. No personal data is transmitted to our servers. Your preferences stay on your device and can be cleared at any time through your browser settings.</p>
+    </footer>
 </body>
 </html>

@@ -74,13 +74,13 @@ body {
 
 /* Header */
 .header {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
     border-bottom: 1px solid var(--color-border);
     background: rgba(10, 10, 15, 0.95);
     backdrop-filter: blur(20px);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 200;
 }
 
 .header-content {
@@ -91,7 +91,7 @@ body {
 
 .logo {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     line-height: 1;
 }
