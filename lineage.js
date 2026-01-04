@@ -168,8 +168,8 @@ node.on('mouseover', function(event, d) {
     tooltip.classed('show', false);
 })
 .on('click', function(event, d) {
-    // Navigate to main gallery filtered to this language
-    window.location.href = `index.html#${d.id}`;
+    // Navigate to main gallery with search parameter
+    window.location.href = `/?search=${encodeURIComponent(d.id)}`;
 });
 
 // Update positions

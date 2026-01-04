@@ -489,6 +489,34 @@ currentLanguageOrder = getLanguageOrder();
 renderLanguages(currentLanguageOrder);
 updateOrderControlButton();
 
+// Check for search parameter from URL (e.g., from lineage page)
+const urlParams = new URLSearchParams(window.location.search);
+const searchParam = urlParams.get('search');
+if (searchParam) {
+    const searchInput = document.getElementById('search');
+    const searchClear = document.getElementById('searchClear');
+
+    // Apply the search
+    searchInput.value = searchParam;
+    currentSearch = searchParam;
+    searchClear.style.display = 'block';
+    filterLanguages();
+
+    // Scroll to show the filtered card (past the hero)
+    setTimeout(() => {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            window.scrollTo({
+                top: hero.offsetHeight,
+                behavior: 'smooth'
+            });
+        }
+    }, 100);
+
+    // Clean up the URL (remove search parameter)
+    window.history.replaceState({}, '', '/');
+}
+
 // Add keyboard shortcuts
 document.addEventListener('keydown', (e) => {
     // Focus search with '/'
