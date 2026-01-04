@@ -469,10 +469,10 @@ document.getElementById('resetBtn')?.addEventListener('click', () => {
     // Re-render with original order
     filterLanguages();
 
-    // Scroll to top (to the filter bar)
-    document.querySelector('.filter-bar').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    // Scroll to the very top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
 
