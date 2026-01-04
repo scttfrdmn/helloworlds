@@ -102,6 +102,16 @@ body {
     color: var(--color-text);
 }
 
+.logo a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+}
+
 .logo span {
     font-style: italic;
     color: var(--color-accent);
@@ -267,7 +277,7 @@ body {
 /* Filter Bar */
 .filter-bar {
     position: sticky;
-    top: 85px;
+    top: 70px;
     background: rgba(10, 10, 15, 0.98);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
