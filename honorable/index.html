@@ -85,6 +85,31 @@
             flex-wrap: wrap;
             gap: 0;
         }
+
+        /* Colored filter buttons */
+        .filter-tag[data-filter="Variant"].active {
+            background: rgba(147, 51, 234, 0.15);
+            color: #a78bfa;
+            border-color: rgba(147, 51, 234, 0.3);
+        }
+
+        .filter-tag[data-filter="Historical"].active {
+            background: rgba(239, 68, 68, 0.15);
+            color: #fca5a5;
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .filter-tag[data-filter="Emerging"].active {
+            background: rgba(34, 197, 94, 0.15);
+            color: #86efac;
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .filter-tag[data-filter="Specialized"].active {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border-color: rgba(59, 130, 246, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -327,6 +352,158 @@
                 creator: "HigherOrderCO",
                 reason: "Brand new, experimental",
                 notable: "Massively parallel language that auto-parallelizes code, runs on GPU",
+                tags: ["Emerging"]
+            },
+            {
+                name: "BBC BASIC",
+                year: 1981,
+                creator: "Sophie Wilson (Acorn)",
+                reason: "BASIC dialect for BBC Micro",
+                notable: "Introduced structured programming to UK schools, influenced a generation of British programmers",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "Commodore 64 BASIC",
+                year: 1982,
+                creator: "Microsoft/Commodore",
+                reason: "BASIC variant for C64",
+                notable: "Powered the best-selling computer of all time, introduced millions to programming",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "Visual FoxPro",
+                year: 1995,
+                creator: "Microsoft",
+                reason: "dBASE descendant, discontinued in 2007",
+                notable: "Dominated desktop database development in the 90s, still running legacy systems today",
+                tags: ["Historical", "Specialized"]
+            },
+            {
+                name: "dBase",
+                year: 1979,
+                creator: "Wayne Ratliff/Ashton-Tate",
+                reason: "Database-specific language",
+                notable: "Created the database software market, inspired SQL Server and Access",
+                tags: ["Historical", "Specialized"]
+            },
+            {
+                name: "Clipper",
+                year: 1985,
+                creator: "Nantucket",
+                reason: "dBASE compiler/variant",
+                notable: "Compiled dBASE code into executables, huge in business applications",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "ActionScript",
+                year: 1998,
+                creator: "Macromedia/Adobe",
+                reason: "Flash-only, platform discontinued",
+                notable: "Powered the interactive web for a decade, YouTube and countless games ran on it",
+                tags: ["Historical", "Specialized"]
+            },
+            {
+                name: "AutoLISP",
+                year: 1986,
+                creator: "Autodesk",
+                reason: "AutoCAD-only scripting language",
+                notable: "Extended AutoCAD for decades, still used in mechanical/architectural design",
+                tags: ["Specialized"]
+            },
+            {
+                name: "MEL (Maya Embedded Language)",
+                year: 1998,
+                creator: "Alias Systems/Autodesk",
+                reason: "Maya-only scripting",
+                notable: "Powers 3D animation in film/games, used on Avatar, Marvel movies, and AAA games",
+                tags: ["Specialized"]
+            },
+            {
+                name: "MaxScript",
+                year: 1996,
+                creator: "Kinetix/Autodesk",
+                reason: "3ds Max-only scripting",
+                notable: "Industry standard for game development and architectural visualization",
+                tags: ["Specialized"]
+            },
+            {
+                name: "Lingo",
+                year: 1988,
+                creator: "Macromedia",
+                reason: "Director-only, platform discontinued",
+                notable: "Powered CD-ROM multimedia era, countless educational titles and games",
+                tags: ["Historical", "Specialized"]
+            },
+            {
+                name: "AppleSoft BASIC",
+                year: 1977,
+                creator: "Microsoft/Apple",
+                reason: "BASIC variant for Apple II",
+                notable: "Apple II dominated education, taught millions in US schools through the 80s",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "Atari BASIC",
+                year: 1979,
+                creator: "Atari",
+                reason: "BASIC variant for Atari 8-bit",
+                notable: "Came with every Atari computer, popular in gaming and education",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "AmigaBASIC",
+                year: 1985,
+                creator: "Microsoft/Commodore",
+                reason: "BASIC variant for Amiga",
+                notable: "Showcased the Amiga's multimedia capabilities",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "Borland C++",
+                year: 1991,
+                creator: "Borland",
+                reason: "C++ compiler/environment, not a distinct language",
+                notable: "Dominated PC development in the 90s, first truly visual C++ IDE",
+                tags: ["Variant", "Historical"]
+            },
+            {
+                name: "Unison",
+                year: 2015,
+                creator: "Unison Computing",
+                reason: "Still experimental, small community",
+                notable: "Revolutionary content-addressed code system, functions never break",
+                tags: ["Emerging"]
+            },
+            {
+                name: "Koka",
+                year: 2012,
+                creator: "Microsoft Research/Daan Leijen",
+                reason: "Research language, not production-ready",
+                notable: "Effect types pioneer, influences mainstream language design",
+                tags: ["Emerging"]
+            },
+            {
+                name: "Pony",
+                year: 2012,
+                creator: "Sylvan Clebsch",
+                reason: "Niche, small adoption",
+                notable: "Actor-model language with reference capabilities, no data races possible",
+                tags: ["Emerging"]
+            },
+            {
+                name: "Red",
+                year: 2011,
+                creator: "Nenad Rakocevic",
+                reason: "Small community, niche use",
+                notable: "Full-stack language from system to GUI, REBOL successor",
+                tags: ["Emerging"]
+            },
+            {
+                name: "Odin",
+                year: 2016,
+                creator: "Ginger Bill",
+                reason: "Growing but still establishing itself",
+                notable: "Modern alternative to C, used in game development, data-oriented design focus",
                 tags: ["Emerging"]
             }
         ];
