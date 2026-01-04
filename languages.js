@@ -6,7 +6,7 @@ const languages = [
             name: "Guido van Rossum",
             bio: "Dutch programmer who created Python while working at CWI in the Netherlands. Named after Monty Python's Flying Circus, he aimed to create a language emphasizing code readability. Served as Python's 'Benevolent Dictator For Life' until 2018, now works at Microsoft."
         }],
-        tags: ["interpreted", "oop", "functional"],
+        tags: ["scripting", "oop", "functional"],
         code: `print("Hello, World!")`,
         filename: "hello.py",
         description: "Python's elegant syntax makes the classic greeting refreshingly simple—just a single line that embodies its philosophy of readability.",
@@ -20,7 +20,7 @@ const languages = [
             name: "Brendan Eich",
             bio: "Created JavaScript in just 10 days at Netscape in May 1995, originally calling it Mocha, then LiveScript. Despite the rushed development, it became the language of the web. Co-founded Mozilla and served as CEO until 2014, later founding Brave Software."
         }],
-        tags: ["interpreted", "web", "oop", "functional"],
+        tags: ["scripting", "web", "oop", "functional"],
         code: `console.log("Hello, World!");`,
         filename: "hello.js",
         description: "The language of the web speaks its first words through the console, a gateway to interactive experiences across billions of devices.",
@@ -128,7 +128,7 @@ func main() {
             name: "Yukihiro Matsumoto (Matz)",
             bio: "Japanese computer scientist who created Ruby to emphasize programmer happiness over machine efficiency. Drew inspiration from Perl, Smalltalk, and Lisp to create a purely object-oriented language. Still actively leads Ruby development and advocates for developer joy in programming."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `puts "Hello, World!"`,
         filename: "hello.rb",
         description: "Designed for programmer happiness, Ruby's greeting reads like poetry—minimal syntax, maximum expressiveness.",
@@ -142,7 +142,7 @@ func main() {
             name: "Rasmus Lerdorf",
             bio: "Danish-Canadian programmer who created PHP (Personal Home Page Tools) to maintain his personal homepage. Never intended to create a programming language—it evolved organically as a template system. PHP now powers over 75% of websites including Facebook and WordPress."
         }],
-        tags: ["interpreted", "web"],
+        tags: ["scripting", "web"],
         code: `<?php
 echo "Hello, World!";
 ?>`,
@@ -217,7 +217,7 @@ main = putStrLn "Hello, World!"`,
             name: "John McCarthy",
             bio: "American computer scientist who coined the term 'artificial intelligence' and created Lisp while at MIT. Received the Turing Award in 1971. Lisp introduced groundbreaking concepts like garbage collection, tree data structures, and treating code as data. Passed away in 2011."
         }],
-        tags: ["interpreted", "functional"],
+        tags: ["scripting", "functional"],
         code: `(print "Hello, World!")`,
         filename: "hello.lisp",
         description: "The second-oldest high-level language speaks in parentheses. Every greeting is a list, every list a possibility.",
@@ -231,7 +231,7 @@ main = putStrLn "Hello, World!"`,
             name: "Guy L. Steele and Gerald Jay Sussman",
             bio: "Created at MIT as a minimalist Lisp dialect. Sussman co-authored 'Structure and Interpretation of Computer Programs' (SICP), one of the most influential CS textbooks. Steele went on to help design Java and Common Lisp. Scheme influenced JavaScript's functional features."
         }],
-        tags: ["interpreted", "functional"],
+        tags: ["scripting", "functional"],
         code: `(display "Hello, World!")
 (newline)`,
         filename: "hello.scm",
@@ -309,7 +309,7 @@ world() -> io:fwrite("Hello, World!~n").`,
             name: "Larry Wall",
             bio: "Created Perl while working as a systems administrator at NASA's Jet Propulsion Laboratory. Designed to make easy things easy and hard things possible. Known for the motto 'There's more than one way to do it.' Also a linguist who brought linguistic principles to language design."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `print "Hello, World!\\n";`,
         filename: "hello.pl",
         description: "The duct tape of the internet. Perl's greeting is terse, practical, and reveals none of its text-processing power.",
@@ -323,7 +323,7 @@ world() -> io:fwrite("Hello, World!~n").`,
             name: "Ross Ihaka and Robert Gentleman",
             bio: "Two statisticians at the University of Auckland, New Zealand, who created R as a free alternative to S language. Named R after their first names. R became the standard for statistical computing and data science, with over 2 million users worldwide."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `cat("Hello, World!\\n")`,
         filename: "hello.r",
         description: "The statistician's language. R greets before diving into data visualization and statistical computing.",
@@ -337,7 +337,7 @@ world() -> io:fwrite("Hello, World!~n").`,
             name: "Cleve Moler",
             bio: "American mathematician and computer programmer, chairman and chief mathematician at MathWorks. Created MATLAB as a teaching tool to give students easy access to LINPACK and EISPACK without learning Fortran. Now the standard in engineering and scientific computing."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `disp('Hello, World!')`,
         filename: "hello.m",
         description: "Engineering and scientific computing speak through matrices. Even 'Hello, World!' is displayed with mathematical precision.",
@@ -555,7 +555,7 @@ msg:
             name: "Brian Fox",
             bio: "Created Bash (Bourne Again Shell) as a free software replacement for the Bourne shell. Developed for the GNU Project while working at the Free Software Foundation. Bash became the default shell for most Linux distributions and macOS (until recently)."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `#!/bin/bash
 echo "Hello, World!"`,
         filename: "hello.sh",
@@ -570,7 +570,7 @@ echo "Hello, World!"`,
             name: "Jeffrey Snover",
             bio: "Microsoft architect who created PowerShell to bring powerful automation to Windows. Based on .NET framework with an object-oriented pipeline, unlike text-based Unix shells. PowerShell is now open-source and runs on Linux and macOS."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `Write-Host "Hello, World!"`,
         filename: "hello.ps1",
         description: "Windows automation meets object-oriented pipelines. PowerShell's greeting is an object, not just text.",
@@ -584,7 +584,7 @@ echo "Hello, World!"`,
             name: "Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes",
             bio: "Created at the Pontifical Catholic University of Rio de Janeiro, Brazil. Designed to be embedded in other applications. Named after the Portuguese word for 'moon.' Powers game engines like World of Warcraft and Roblox, and network equipment."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `print("Hello, World!")`,
         filename: "hello.lua",
         description: "The embedded scripting language of choice. Lua's lightweight greeting powers game engines and embedded systems worldwide.",
@@ -705,7 +705,7 @@ pub fn main() !void {
             name: "Urban Müller",
             bio: "Swiss physics student who created Brainfuck to design the smallest possible compiler. Consists of only 8 commands, making it Turing-complete but deliberately difficult to program in. A parody of minimalist language design."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.`,
         filename: "hello.bf",
         description: "The ultimate minimalist language. Brainfuck's greeting is a Turing-complete puzzle with just 8 commands.",
@@ -719,7 +719,7 @@ pub fn main() !void {
             name: "Edwin Brady and Chris Morris",
             bio: "Created on April 1st at Durham University as a joke language where only whitespace characters (space, tab, newline) are meaningful. All other characters are ignored. Edwin Brady later created Idris, a dependently-typed programming language."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `   \t  \t   \n\t\n     \t\t  \t \t\n\t\n     \t\t \t\t  \n\t\n     \t\t \t\t  \n\t\n     \t\t \t\t\t\t\n\t\n     \t \t\t  \n\t\n     \t     \n\t\n     \t\t\t \t\t\t\n\t\n     \t\t \t\t\t\t\n\t\n     \t\t\t  \t\n\t\n     \t\t \t\t  \n\t\n     \t\t  \t  \n\t\n  \n\n\n`,
         filename: "hello.ws",
         description: "Only whitespace characters are meaningful. The greeting is invisible to the human eye—a meditation on code's essence.",
@@ -733,7 +733,7 @@ pub fn main() !void {
             name: "Adam Lindsay",
             bio: "Created by a researcher at Lancaster University as a parody based on lolcat memes. Designed to make programming deliberately humorous with keywords like HAI, KTHXBYE, and VISIBLE. Shows that programming languages can be fun and creative."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `HAI 1.2
     VISIBLE "Hello, World!"
 KTHXBYE`,
@@ -846,7 +846,7 @@ Hamlet:
             name: "Donald D. Chamberlin and Raymond F. Boyce",
             bio: "Created SEQUEL (later SQL) at IBM after learning about Codd's relational model. Boyce passed away in 1974 before SQL's full release. Chamberlin continued development. SQL became the standard database query language, used by billions of applications."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `SELECT 'Hello, World!' AS greeting;`,
         filename: "hello.sql",
         description: "The language of data queries. SQL greets by selecting a string, hinting at the relational power beneath.",
@@ -860,7 +860,7 @@ Hamlet:
             name: "Alain Colmerauer and Robert Kowalski",
             bio: "Developed in Marseille, France (Colmerauer) and Edinburgh, UK (Kowalski). First logic programming language, based on formal logic and automated theorem proving. Used in AI, natural language processing, and expert systems. Influenced modern AI and knowledge representation."
         }],
-        tags: ["interpreted", "functional"],
+        tags: ["scripting", "functional"],
         code: `:- initialization(main).
 
 main :-
@@ -935,7 +935,7 @@ int main(int argc, const char * argv[]) {
             name: "Alan Kay, Dan Ingalls, Adele Goldberg (Xerox PARC)",
             bio: "Revolutionary language created at Xerox PARC that pioneered the graphical user interface and object-oriented programming. Alan Kay coined the term 'object-oriented' and received the Turing Award in 2003. Influenced nearly every modern OOP language."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `Transcript show: 'Hello, World!'; cr.`,
         filename: "hello.st",
         description: "Everything is an object, everything is a message. Smalltalk revolutionized OOP and greets through its transcript.",
@@ -949,7 +949,7 @@ int main(int argc, const char * argv[]) {
             name: "John G. Kemeny and Thomas E. Kurtz",
             bio: "Created at Dartmouth College to make computing accessible to non-science students. Kemeny later became Dartmouth's president. BASIC was free and easy to learn, bringing programming to millions. Influenced early microcomputer era and inspired Visual Basic."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `10 PRINT "Hello, World!"
 20 END`,
         filename: "hello.bas",
@@ -1035,7 +1035,7 @@ LET start() = VALOF
             name: "Leo Geurts, Lambert Meertens, Steven Pemberton",
             bio: "Created at CWI in Amsterdam as a teaching language to replace BASIC. Featured interactive environment and automatic type inference. Designed to be learnable in an evening. Though never widely adopted, ABC's clarity and simplicity directly inspired Guido van Rossum to create Python."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `WRITE "Hello, World!" /`,
         filename: "hello.abc",
         description: "Python's spiritual ancestor. ABC's emphasis on readability and simplicity lives on in Python's design philosophy.",
@@ -1069,7 +1069,7 @@ END Hello.`,
             name: "David Ungar and Randall Smith",
             bio: "Created at Xerox PARC and Stanford as a prototype-based object-oriented language. Eliminated classes in favor of prototype objects. Pioneered JIT compilation techniques used in modern VMs. Directly influenced JavaScript's object model and introduced optimization techniques used in V8 and HotSpot."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `'Hello, World!' printLine.`,
         filename: "hello.self",
         description: "Self's prototype-based inheritance revolutionized object-oriented thinking and gave JavaScript its unique object model.",
@@ -1153,7 +1153,7 @@ End Module`,
             name: "Alfred Aho, Peter Weinberger, Brian Kernighan",
             bio: "Created at Bell Labs by three legends: Aho (of compiler design fame), Weinberger (Unix pioneer), and Kernighan (of K&R C and 'Hello, World!'). AWK revolutionized text processing with pattern-action paradigm. The name comes from their initials. Still indispensable for Unix text manipulation."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `BEGIN { print "Hello, World!" }`,
         filename: "hello.awk",
         description: "The Unix text processing master. AWK's pattern-action paradigm made complex text transformations simple and elegant.",
@@ -1167,7 +1167,7 @@ End Module`,
             name: "Kenneth E. Iverson",
             bio: "Created APL (A Programming Language) while at Harvard, later developed at IBM. Received the Turing Award in 1979. APL's mathematical notation revolutionized array programming. Used a special character set requiring custom keyboards. Influenced modern array languages and spreadsheets."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `'Hello, World!'`,
         filename: "hello.apl",
         description: "The mathematical notation made executable. APL's cryptic symbols hide revolutionary array-processing power that influenced spreadsheets and data science.",
@@ -1196,7 +1196,7 @@ HELLO`,
             name: "Wally Feurzeig, Seymour Papert, Cynthia Solomon",
             bio: "Created at BBN Technologies with Seymour Papert from MIT. Designed to teach children programming through turtle graphics. Papert's educational philosophy emphasized 'learning by doing.' Logo introduced millions of students to programming and computational thinking."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `PRINT [Hello, World!]`,
         filename: "hello.logo",
         description: "The turtle that taught generations. Logo made programming visual and accessible, introducing computational thinking to millions of children.",
@@ -1225,7 +1225,7 @@ HELLO`,
             name: "Richard Stallman",
             bio: "Created Emacs Lisp for the GNU Emacs editor. Stallman founded the Free Software Foundation and launched the GNU Project. Emacs Lisp makes the editor infinitely extensible—it's been called 'an operating system disguised as a text editor.' Millions use Emacs daily, customizing it with Elisp."
         }],
-        tags: ["interpreted", "functional"],
+        tags: ["scripting", "functional"],
         code: `(message "Hello, World!")`,
         filename: "hello.el",
         description: "The editor's soul. Emacs Lisp turns a text editor into an infinitely customizable operating environment, beloved by millions.",
@@ -1258,7 +1258,7 @@ void main()
             name: "Facebook (Julien Verlaguet, Alok Menghrajani, et al.)",
             bio: "Created at Facebook to add static typing to PHP while maintaining compatibility. Runs on HHVM (HipHop Virtual Machine). Brought gradual typing and modern language features to PHP developers. Facebook's entire codebase migrated from PHP to Hack. Demonstrates large-scale language evolution."
         }],
-        tags: ["interpreted", "web", "oop"],
+        tags: ["scripting", "web", "oop"],
         code: `<?hh
 echo "Hello, World!\\n";`,
         filename: "hello.hack",
@@ -1287,7 +1287,7 @@ echo "Hello, World!\\n";`,
             name: "John Warnock and Charles Geschke (Adobe)",
             bio: "Created PostScript at Adobe (which they founded). Warnock and Geschke revolutionized desktop publishing—PostScript became the standard for laser printers and professional printing. Turing-complete stack-based language. Led to PDF. Warnock received the Turing Award in 2023."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `/Courier findfont 24 scalefont setfont
 72 720 moveto
 (Hello, World!) show
@@ -1304,7 +1304,7 @@ showpage`,
             name: "Ralph Griswold, David Farber, Ivan Polonsky (Bell Labs)",
             bio: "Created at Bell Labs for string manipulation and pattern matching. SNOBOL introduced powerful pattern-matching decades before regex became common. Griswold later created Icon. SNOBOL4 (1967) became widely used in humanities computing and text processing before Perl dominated."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `    OUTPUT = "Hello, World!"
 END`,
         filename: "hello.sno",
@@ -1319,7 +1319,7 @@ END`,
             name: "MIT Media Lab (Mitchel Resnick, et al.)",
             bio: "Created at MIT Media Lab's Lifelong Kindergarten Group. Mitchel Resnick leads the team, continuing Seymour Papert's legacy. Visual blocks instead of text make programming accessible to young children. Over 100 million users worldwide. Inspired countless block-based programming environments."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `when green flag clicked
 say [Hello, World!]`,
         filename: "hello.sb3",
@@ -1334,7 +1334,7 @@ say [Hello, World!]`,
             name: "John Ousterhout",
             bio: "Created Tcl (Tool Command Language) at UC Berkeley while working on CAD tools. Also created Tk toolkit for GUIs. Tcl's 'everything is a string' philosophy made it simple and embeddable. Later founded Scriptics. Tcl/Tk became the standard for quick GUI development in the 1990s."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `puts "Hello, World!"`,
         filename: "hello.tcl",
         description: "The glue language. Tcl's simplicity and Tk toolkit made it the goto for rapid GUI development and tool integration.",
@@ -1448,7 +1448,7 @@ main = putStrLn "Hello, World!"`,
             name: "Stephen Wolfram",
             bio: "Created the Wolfram Language (originally Mathematica's language) emphasizing symbolic computation and knowledge-based programming. Wolfram is a physicist, computer scientist, and entrepreneur. The language integrates vast built-in knowledge and algorithms. Used in scientific computing, AI, and education."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `Print["Hello, World!"]`,
         filename: "hello.wl",
         description: "Knowledge meets computation. Wolfram Language integrates massive algorithms and data into a symbolic programming paradigm.",
@@ -1462,7 +1462,7 @@ main = putStrLn "Hello, World!"`,
             name: "Paul Falstad",
             bio: "Created Zsh (Z Shell) while a student at Princeton. Named after teaching assistant Zhong Shao. Extended Bash with powerful features: better completion, spelling correction, themes. Became macOS default shell in 2019, replacing Bash. Oh My Zsh framework has millions of users."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `#!/bin/zsh
 echo "Hello, World!"`,
         filename: "hello.zsh",
@@ -1477,7 +1477,7 @@ echo "Hello, World!"`,
             name: "Axel Liljencrantz",
             bio: "Created Fish (Friendly Interactive Shell) to be user-friendly by default. Unlike Bash, prioritizes interactive use over scripting. Features autosuggestions, syntax highlighting, and web-based configuration. Philosophy: if a program can do something automatically, it should."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `#!/usr/bin/fish
 echo "Hello, World!"`,
         filename: "hello.fish",
@@ -1492,7 +1492,7 @@ echo "Hello, World!"`,
             name: "Microsoft",
             bio: "Created by Microsoft as a lightweight Active Scripting language for Windows. Subset of Visual Basic for scripting tasks. Widely used for Windows administration, ASP web pages, and Internet Explorer. Deprecated in favor of PowerShell but still found in legacy systems."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `WScript.Echo "Hello, World!"`,
         filename: "hello.vbs",
         description: "Windows scripting workhorse. VBScript automated Windows administration before PowerShell, still lurking in enterprise systems.",
@@ -1554,7 +1554,7 @@ end.`,
             name: "Ralph Griswold",
             bio: "Griswold created Icon after SNOBOL, focusing on string and structure manipulation with generators and goal-directed evaluation. Introduced innovative control structures. Used in text processing, AI, and rapid prototyping. Griswold spent his career at University of Arizona advancing programming language design."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `procedure main()
     write("Hello, World!")
 end`,
@@ -1570,7 +1570,7 @@ end`,
             name: "SAS Institute (Anthony Barr, James Goodnight, et al.)",
             bio: "Developed at North Carolina State University, later commercialized by SAS Institute. Designed for statistical analysis and data management. Became the standard in pharmaceutical research, finance, and academics. SAS Institute is one of the largest privately-held software companies."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `data _null_;
     put 'Hello, World!';
 run;`,
@@ -1616,7 +1616,7 @@ run;`,
             name: "Chris Pressey",
             bio: "Created Befunge as a two-dimensional esoteric language that's intentionally difficult to compile. Code moves in four directions across a 2D grid. Pressey wanted to create a language as hard to compile as possible. Part of the esoteric language movement exploring unusual computation models."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `"!dlroW ,olleH">:#,_@`,
         filename: "hello.bf93",
         description: "Code in two dimensions. Befunge executes by moving through a 2D grid, making it beautifully bizarre and compiler-hostile.",
@@ -1630,7 +1630,7 @@ run;`,
             name: "Ben Olmstead",
             bio: "Created Malbolge (named after Dante's eighth circle of hell) to be the most difficult programming language possible. Self-modifying code, encryption, and base-3 arithmetic make it nearly impossible to write. First Hello World program took two years to create (found by a search algorithm). Pushing limits of obscurity."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `(=<\`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?\`=*z]Kw%oG4UUS0/@-ejc(:'8dc`,
         filename: "hello.mal",
         description: "Dante's programming inferno. Malbolge is intentionally the hardest language—the first Hello World took two years to create.",
@@ -1644,7 +1644,7 @@ run;`,
             name: "Torbjörn Söderstedt",
             bio: "Created the Chicken language where the only valid keyword is 'chicken'. Number of 'chicken's and punctuation determine the operation. A brilliant parody of programming language minimalism. Demonstrates that syntax is just convention—computation can happen with any symbols."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken
 chicken chicken chicken chicken chicken chicken chicken
 chicken chicken chicken chicken chicken chicken chicken chicken chicken chicken
@@ -1796,7 +1796,7 @@ main(application-name(), application-arguments());`,
             name: "Steve Dekorte",
             bio: "Created Io as a minimalist prototype-based language inspired by Self, Smalltalk, and Lisp. Everything is a message to an object, everything is an object. Influenced by actor model concurrency. Used Io's coroutines and concurrency features in various projects. Open source with a small but dedicated community."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `"Hello, World!" println`,
         filename: "hello.io",
         description: "Minimalist prototype-based beauty. Io's pure message-passing model influenced Scala and demonstrated prototype elegance.",
@@ -1810,7 +1810,7 @@ main(application-name(), application-arguments());`,
             name: "Kenneth E. Iverson and Roger Hui",
             bio: "Iverson created J as a successor to APL, using ASCII instead of special symbols. Hui co-designed and implemented it. J maintains APL's array-oriented power while being typeable on standard keyboards. Iverson received the Turing Award in 1979 for APL. J continues to evolve with an active community."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `'Hello, World!'`,
         filename: "hello.ijs",
         description: "APL's ASCII successor by Iverson himself. J brings array programming power to standard keyboards, beloved by mathematicians.",
@@ -1824,7 +1824,7 @@ main(application-name(), application-arguments());`,
             name: "David Morgan-Mar",
             bio: "Australian programmer who creates esoteric languages as art. Also created Piet (programs as paintings). Chef programs are valid cooking recipes. Ingredients are data, method steps are instructions. Morgan-Mar explores the intersection of code, language, and other human endeavors. PhD in astrophysics."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `Hello World Souffle.
 
 This recipe prints the immortal words "Hello world!", in a basically brute force way. It also makes a lot of food for one person.
@@ -1856,7 +1856,7 @@ Serves 1.`,
             name: "Dylan Beattie",
             bio: "British developer and musician who created Rockstar so programs read like 1980s rock song lyrics. Variables are poetic, operations use rock terminology. Beattie is a Microsoft MVP and conference speaker who combines programming with performance art. Rockstar has a working compiler and active community."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `Desire is a lovestruck ladykiller
 My world is nothing 
 Fire is ice
@@ -1895,7 +1895,7 @@ YOU HAVE BEEN TERMINATED`,
             name: "Daniel Temkin",
             bio: "Artist and programmer exploring the aesthetic possibilities of code. Created Velato where programs are MIDI music files—pitch sequences encode instructions. Also created Entropy (code degrades over time) and other conceptual languages. Shows programming as performance art. Based in New York."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `[Musical notation encoding: This would be a MIDI file where specific note sequences encode "Hello, World!" - the pitches C D E F G A B in specific patterns create the output]`,
         filename: "hello.velato",
         description: "Listen to your code. Velato programs are MIDI music—you can hear your Hello World as a melody.",
@@ -1924,7 +1924,7 @@ YOU HAVE BEEN TERMINATED`,
             name: "David Morgan-Mar",
             bio: "Morgan-Mar strikes again! Ook! is Brainfuck for orangutans—only 'Ook.', 'Ook?', and 'Ook!' are valid tokens. Named after the Librarian from Terry Pratchett's Discworld who only says 'Ook!'. Demonstrates that even Brainfuck can be more obscure. Part of Morgan-Mar's exploration of code as creative expression."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
 Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
 Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook.
@@ -1971,7 +1971,7 @@ Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook.`,
             name: "Sean Heber",
             bio: "Created Cow as a humorous variant using only 'moo', 'mOo', 'moO', 'mOO', 'Moo', 'MOo', 'MoO', and 'MOO' commands. Similar concept to Chicken but with bovine vocabulary. Heber is an iOS developer who enjoys playful programming. Cow demonstrates that any consistent symbol set can encode computation."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo MOo MOo MOo MOo MOo
 MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MOo MoO MoO MoO
 MoO MoO MoO MoO MoO Moo MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO
@@ -2011,7 +2011,7 @@ MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
             name: "anonymous",
             bio: "Created Whenever as a non-deterministic language where statement order doesn't matter—the interpreter executes them 'whenever' it wants. Features time travel and random execution order. A fascinating exploration of non-sequential programming. Demonstrates that temporal ordering is just a convention we're used to."
         }],
-        tags: ["esoteric", "interpreted"],
+        tags: ["esoteric", "scripting"],
         code: `1 print("Hello, World!");`,
         filename: "hello.whenever",
         description: "Time is negotiable. Whenever executes statements in random order—your code runs whenever it feels like it.",
@@ -2025,7 +2025,7 @@ MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
             name: "Bill Atkinson and Dan Winkler (Apple)",
             bio: "Created for HyperCard by Bill Atkinson (MacPaint creator) and Dan Winkler. English-like syntax for creating interactive hypermedia. Inspired a generation of programmers and directly influenced AppleScript. HyperCard was revolutionary—Tim Berners-Lee cited it as inspiration for the World Wide Web."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `on mouseUp
   answer "Hello, World!"
 end mouseUp`,
@@ -2041,7 +2041,7 @@ end mouseUp`,
             name: "Arthur Whitney (Kx Systems)",
             bio: "Whitney created Q for kdb+ database, used heavily in high-frequency trading. Q is tersely expressive, processing massive time-series data at incredible speeds. Whitney previously worked on A+ at Morgan Stanley and K. His languages are known for extreme conciseness and performance. Q dominates financial analytics."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `"Hello, World!"`,
         filename: "hello.q",
         description: "Wall Street's secret weapon. Q powers high-frequency trading with terse array operations processing billions of records.",
@@ -2055,7 +2055,7 @@ end mouseUp`,
             name: "Carl Sassenrath",
             bio: "Created Rebol (Relative Expression Based Object Language) for distributed computing and messaging. Sassenrath previously designed the Amiga OS kernel. Rebol uses dialects—embedded domain-specific languages. Influenced modern data exchange formats. Open-sourced in 2012. Spawned Red language as spiritual successor."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `print "Hello, World!"`,
         filename: "hello.rebol",
         description: "Messaging language ahead of its time. Rebol's dialects and data exchange philosophy influenced modern distributed systems.",
@@ -2084,7 +2084,7 @@ print "Hello, World!"`,
             name: "Fredrik Hübinette",
             bio: "Created Pike for LPC MUD development, later became general-purpose. Combines C syntax with high-level features. Used in web servers (Roxen) and networking applications. Features automatic memory management, built-in data types, and module system. Continues development with focus on networking and performance."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `int main() {
     write("Hello, World!\\n");
     return 0;
@@ -2101,7 +2101,7 @@ print "Hello, World!"`,
             name: "Mahmoud Fayed",
             bio: "Egyptian computer scientist who created Ring as a practical general-purpose language. Designed to be simple, small, flexible. Features natural language programming option, visual development, works well for beginners and experts. Supports multiple programming paradigms. Growing community particularly in Arabic-speaking countries."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `see "Hello, World!" + nl`,
         filename: "hello.ring",
         description: "Simplicity as philosophy. Ring brings approachable syntax and natural language programming to modern development.",
@@ -2115,7 +2115,7 @@ print "Hello, World!"`,
             name: "Bob Nystrom",
             bio: "Created Wren as a small, fast scripting language for embedding in applications. Nystrom works at Google on Dart, previously worked on game engines. Author of 'Crafting Interpreters' and 'Game Programming Patterns'. Wren is class-based, concurrent, uses fibers. Designed for game development embedability."
         }],
-        tags: ["interpreted"],
+        tags: ["scripting"],
         code: `System.print("Hello, World!")`,
         filename: "hello.wren",
         description: "Scripting perfected. Wren is small, fast, and embeddable—designed by the author of 'Crafting Interpreters' for game engines.",
@@ -2129,7 +2129,7 @@ print "Hello, World!"`,
             name: "Walter Smith (Apple)",
             bio: "Created for Apple Newton PDA. Prototype-based like Self, but more practical for embedded devices. Featured sophisticated persistent object storage and dynamic typing. Newton was ahead of its time—modern smartphones owe much to its concepts. NewtonScript influenced modern mobile development thinking."
         }],
-        tags: ["interpreted", "oop"],
+        tags: ["scripting", "oop"],
         code: `Print("Hello, World!");`,
         filename: "hello.ns",
         description: "The PDA's brain. NewtonScript pioneered mobile development concepts that smartphones would reinvent decades later.",
