@@ -113,8 +113,10 @@ function renderLanguages(languagesToRender) {
         link.addEventListener('click', () => {
             const langName = link.dataset.lang;
             const searchInput = document.getElementById('search');
+            const searchClear = document.getElementById('searchClear');
             searchInput.value = langName;
             currentSearch = langName;
+            searchClear.style.display = 'block';
             filterLanguages();
             searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
@@ -247,9 +249,23 @@ document.querySelectorAll('.filter-tag').forEach(button => {
 
 // Set up search
 const searchInput = document.getElementById('search');
+const searchClear = document.getElementById('searchClear');
+
 searchInput.addEventListener('input', (e) => {
     currentSearch = e.target.value;
     filterLanguages();
+
+    // Show/hide clear button based on input value
+    searchClear.style.display = currentSearch ? 'block' : 'none';
+});
+
+// Clear search button
+searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    currentSearch = '';
+    filterLanguages();
+    searchClear.style.display = 'none';
+    searchInput.focus();
 });
 
 // Animated counter for stats
@@ -417,6 +433,7 @@ document.addEventListener('keydown', (e) => {
         searchInput.value = '';
         currentSearch = '';
         filterLanguages();
+        document.getElementById('searchClear').style.display = 'none';
         searchInput.blur();
     }
 });
