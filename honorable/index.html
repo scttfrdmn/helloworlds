@@ -28,6 +28,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css?v=14">
+
+    <style>
+        /* Full width cards for honorable mentions */
+        #mentionsGrid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        #mentionsGrid .language-card {
+            width: 100%;
+            max-width: none;
+        }
+
+        /* Colored tag badges */
+        .status-badge {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-variant {
+            background: rgba(147, 51, 234, 0.15);
+            color: #a78bfa;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+        }
+
+        .status-historical {
+            background: rgba(239, 68, 68, 0.15);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .status-emerging {
+            background: rgba(34, 197, 94, 0.15);
+            color: #86efac;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .status-specialized {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .language-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -45,12 +103,10 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section style="padding: var(--spacing-lg) 0; text-align: center; border-bottom: 1px solid var(--color-border);">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Honorable Mentions</h1>
-                <p class="hero-subtitle">Languages that didn't make the main collection, but deserve recognition</p>
-            </div>
+            <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; margin-bottom: var(--spacing-sm); background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent-soft) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Honorable Mentions</h1>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--color-text-dim); max-width: 600px; margin: 0 auto;">Languages that didn't make the main collection, but deserve recognition</p>
         </div>
     </section>
 
@@ -74,7 +130,7 @@
 
     <section class="gallery">
         <div class="container">
-            <div id="mentionsGrid" class="languages-grid"></div>
+            <div id="mentionsGrid"></div>
         </div>
     </section>
 
@@ -95,7 +151,7 @@
                 creator: "Borland",
                 reason: "Variant of Pascal with a blazingly fast compiler",
                 notable: "Made programming accessible in the 1980s, launched Anders Hejlsberg's career (→ Delphi → C# → TypeScript)",
-                tag: "Variant"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "LaTeX",
@@ -103,7 +159,7 @@
                 creator: "Leslie Lamport",
                 reason: "Macro package built on TeX",
                 notable: "De facto standard for academic papers, theses, and technical documentation worldwide",
-                tag: "Variant"
+                tags: ["Variant", "Specialized"]
             },
             {
                 name: "QuickBASIC",
@@ -111,7 +167,7 @@
                 creator: "Microsoft",
                 reason: "BASIC variant with nearly identical syntax",
                 notable: "Bridge between BASIC and Visual Basic, compiled instead of interpreted",
-                tag: "Variant"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "Visual Basic 6",
@@ -119,7 +175,7 @@
                 creator: "Microsoft",
                 reason: "Succeeded by VB.NET (included in main collection)",
                 notable: "Made Windows app development accessible to millions, RAD tool that dominated corporate development",
-                tag: "Historical"
+                tags: ["Historical"]
             },
             {
                 name: "Turbo C",
@@ -127,7 +183,7 @@
                 creator: "Borland",
                 reason: "C compiler/dialect, not a distinct language",
                 notable: "Lightning-fast compilation made C development accessible on PCs",
-                tag: "Variant"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "GW-BASIC",
@@ -135,7 +191,7 @@
                 creator: "Microsoft",
                 reason: "BASIC dialect for IBM PC",
                 notable: "Shipped with MS-DOS, introduced millions to programming in the 80s and 90s",
-                tag: "Historical"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "QBASIC",
@@ -143,7 +199,7 @@
                 creator: "Microsoft",
                 reason: "Simplified QuickBASIC, same language family",
                 notable: "Included free with DOS/Windows, taught a generation of programmers",
-                tag: "Historical"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "Turbo Prolog",
@@ -151,7 +207,7 @@
                 creator: "Borland",
                 reason: "Prolog variant, later became Visual Prolog",
                 notable: "Made logic programming accessible on PCs",
-                tag: "Variant"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "MSX-BASIC",
@@ -159,7 +215,7 @@
                 creator: "Microsoft/ASCII",
                 reason: "BASIC dialect for MSX computers",
                 notable: "Dominated home computing in Japan, Brazil, and parts of Europe",
-                tag: "Historical"
+                tags: ["Variant", "Historical"]
             },
             {
                 name: "HyperTalk",
@@ -167,7 +223,7 @@
                 creator: "Bill Atkinson/Apple",
                 reason: "Too specialized (HyperCard only)",
                 notable: "Revolutionary natural language scripting, inspired modern no-code tools",
-                tag: "Historical"
+                tags: ["Historical", "Specialized"]
             },
             {
                 name: "Logo (Turtle Graphics)",
@@ -175,7 +231,7 @@
                 creator: "Wally Feurzeig, Seymour Papert",
                 reason: "Educational variant of Lisp",
                 notable: "Taught millions of children programming through turtle graphics",
-                tag: "Specialized"
+                tags: ["Variant", "Specialized"]
             },
             {
                 name: "Scratch",
@@ -183,7 +239,7 @@
                 creator: "MIT Media Lab",
                 reason: "Visual/educational programming environment",
                 notable: "Over 100 million users, revolutionized how kids learn programming",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "Blockly",
@@ -191,7 +247,7 @@
                 creator: "Google",
                 reason: "Visual programming framework/library",
                 notable: "Powers many educational coding platforms, generates JavaScript/Python/PHP",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "LabVIEW",
@@ -199,7 +255,7 @@
                 creator: "National Instruments",
                 reason: "Visual programming for instrumentation",
                 notable: "Industry standard for test/measurement, used in research labs and manufacturing",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "VHDL",
@@ -207,7 +263,7 @@
                 creator: "U.S. Department of Defense",
                 reason: "Hardware description language",
                 notable: "Designs microprocessors and FPGAs, hardware equivalent of a programming language",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "Verilog",
@@ -215,7 +271,7 @@
                 creator: "Phil Moorby/Gateway Design",
                 reason: "Hardware description language",
                 notable: "Alternative to VHDL, simpler syntax, widely used in chip design",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "PostScript",
@@ -223,7 +279,7 @@
                 creator: "Adobe Systems",
                 reason: "Page description language",
                 notable: "Revolutionized desktop publishing, still used in PDF rendering",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "XSLT",
@@ -231,7 +287,7 @@
                 creator: "W3C",
                 reason: "XML transformation language",
                 notable: "Functional language for transforming XML, used in web services",
-                tag: "Specialized"
+                tags: ["Specialized"]
             },
             {
                 name: "Mojo",
@@ -239,7 +295,7 @@
                 creator: "Modular Inc",
                 reason: "Too new, still evolving",
                 notable: "Python-compatible with C-level performance, designed for AI workloads",
-                tag: "Emerging"
+                tags: ["Emerging"]
             },
             {
                 name: "Carbon",
@@ -247,7 +303,7 @@
                 creator: "Google",
                 reason: "Experimental successor to C++",
                 notable: "Google's attempt to modernize C++ with safer defaults and better ergonomics",
-                tag: "Emerging"
+                tags: ["Emerging"]
             },
             {
                 name: "Gleam",
@@ -255,7 +311,7 @@
                 creator: "Louis Pilfold",
                 reason: "Small community, still establishing itself",
                 notable: "Type-safe functional language for the Erlang VM with friendly syntax",
-                tag: "Emerging"
+                tags: ["Emerging"]
             },
             {
                 name: "Roc",
@@ -263,7 +319,7 @@
                 creator: "Richard Feldman",
                 reason: "Pre-1.0, still in development",
                 notable: "Fast functional language inspired by Elm, focuses on compile-time guarantees",
-                tag: "Emerging"
+                tags: ["Emerging"]
             },
             {
                 name: "Bend",
@@ -271,7 +327,7 @@
                 creator: "HigherOrderCO",
                 reason: "Brand new, experimental",
                 notable: "Massively parallel language that auto-parallelizes code, runs on GPU",
-                tag: "Emerging"
+                tags: ["Emerging"]
             }
         ];
 
@@ -289,12 +345,18 @@
                 card.className = 'language-card';
                 card.style.animationDelay = `${index * 0.05}s`;
 
+                // Generate colored badge tags
+                const tagBadges = mention.tags.map(tag => {
+                    const tagClass = `status-${tag.toLowerCase()}`;
+                    return `<span class="status-badge ${tagClass}">${tag}</span>`;
+                }).join('');
+
                 card.innerHTML = `
                     <div class="language-header">
                         <div class="language-info">
                             <h3>${mention.name}</h3>
                             <div class="language-meta">
-                                <span class="language-tag">${mention.tag}</span>
+                                ${tagBadges}
                             </div>
                         </div>
                         <div class="language-year">${mention.year}</div>
@@ -305,8 +367,8 @@
                             <span style="color: var(--color-text);">${mention.creator}</span>
                         </div>
                         <div style="margin-bottom: 0.75rem;">
-                            <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Not included because:</strong>
-                            <span style="color: var(--color-text-dim);">${mention.reason}</span>
+                            <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Why not included:</strong>
+                            <span style="color: var(--color-text);">${mention.reason}</span>
                         </div>
                         <div>
                             <strong style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-dim);">Why notable:</strong>
@@ -323,9 +385,9 @@
         function filterMentions() {
             let filtered = mentions;
 
-            // Apply tag filter
+            // Apply tag filter (check if any of the mention's tags match the filter)
             if (currentFilter !== 'all') {
-                filtered = filtered.filter(m => m.tag === currentFilter);
+                filtered = filtered.filter(m => m.tags.includes(currentFilter));
             }
 
             // Apply search filter with relevance scoring
