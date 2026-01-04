@@ -150,10 +150,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     padding-top: 15vh;
     padding-bottom: 10rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
     position: relative;
     background: radial-gradient(ellipse at top, rgba(255, 215, 0, 0.05) 0%, transparent 60%),
                 radial-gradient(ellipse at bottom right, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
