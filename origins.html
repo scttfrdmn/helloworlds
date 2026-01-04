@@ -37,6 +37,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="origins-styles.css">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://helloworlds.io/origins">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://helloworlds.io/origins#article",
+          "headline": "The Origins of Hello, World!",
+          "description": "The complete history of programming's most famous phrase, from Brian Kernighan's 1972 B language tutorial to becoming every developer's rite of passage",
+          "datePublished": "2026-01-01",
+          "dateModified": "2026-01-04",
+          "author": {
+            "@id": "https://helloworlds.io/origins#brian-kernighan"
+          },
+          "about": {
+            "@type": "Thing",
+            "name": "Hello World Program",
+            "description": "The first program traditionally written when learning a new programming language"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://helloworlds.io/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://helloworlds.io/origins#breadcrumb"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://helloworlds.io/origins#brian-kernighan",
+          "name": "Brian W. Kernighan",
+          "givenName": "Brian",
+          "familyName": "Kernighan",
+          "birthDate": "1942",
+          "birthPlace": {
+            "@type": "Place",
+            "name": "Toronto, Canada"
+          },
+          "jobTitle": "Computer Scientist",
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "Bell Labs"
+            },
+            {
+              "@type": "Organization",
+              "name": "Princeton University"
+            }
+          ],
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "Princeton University"
+          },
+          "knowsAbout": ["Computer Science", "Unix", "C Programming Language", "AWK", "Programming Languages"],
+          "description": "Legendary computer scientist who created the first Hello World program in 1972, co-authored The C Programming Language, and contributed to Unix development at Bell Labs"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://helloworlds.io/origins#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://helloworlds.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Origins",
+              "item": "https://helloworlds.io/origins"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://helloworlds.io/origins#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who created the first Hello World program?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brian Kernighan created the first Hello World program in 1972 in his internal Bell Labs memo 'A Tutorial Introduction to the Language B.' The program simply printed 'hello, world' (lowercase, with comma)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When was Hello World first published?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hello World was first published in 1972 in Brian Kernighan's B language tutorial, then became widely known through 'The C Programming Language' book (K&R) published in 1978."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is it called Hello World?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brian Kernighan chose 'Hello, World!' as a simple, friendly greeting to demonstrate basic output. It was minimal enough for beginners to type, yet showed immediate results proving the programming environment worked."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What was the original Hello World program?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The original 1972 version in B language was: main() { printf(\"hello, world\\n\"); }. The exact phrase evolved slightly over time, with capitalization and punctuation varying in different versions."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     
