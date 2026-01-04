@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Preview - Origins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a24 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Subtle glow */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 60px;
+            max-width: 1000px;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            color: #9a9aa8;
+            margin-bottom: 50px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 200px;
+            color: #ffd700;
+            opacity: 0.3;
+            line-height: 0.5;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            color: #e8e8f0;
+        }
+
+        .title .highlight {
+            color: #ffd700;
+            font-style: italic;
+        }
+
+        .subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 28px;
+            color: #9a9aa8;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            color: #ffd700;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            color: #9a9aa8;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .meta-value {
+            font-size: 20px;
+            color: #ffd700;
+        }
+
+        .url {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            color: #ffd700;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">hello,worlds / origins</div>
+        <div class="quote-mark">"</div>
+        <h1 class="title">The Origins of<br><span class="highlight">Hello, World!</span></h1>
+        <p class="subtitle">How two simple words became the universal<br>first step in every programmer's journey</p>
+        <div class="meta">
+            <div class="meta-item">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">1972</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Creator</span>
+                <span class="meta-value">Brian Kernighan</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Bell Labs</span>
+            </div>
+        </div>
+    </div>
+    <div class="url">helloworlds.io/origins</div>
+</body>
+</html>
