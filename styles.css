@@ -305,6 +305,8 @@ body {
 .search-clear {
     position: absolute;
     right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     background: transparent;
     border: none;
     color: var(--color-text-dim);
@@ -314,6 +316,7 @@ body {
     padding: 0.25rem 0.5rem;
     transition: all 0.2s ease;
     opacity: 0.6;
+    z-index: 10;
 }
 
 .search-clear:hover {
