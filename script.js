@@ -469,13 +469,14 @@ document.getElementById('resetBtn')?.addEventListener('click', () => {
     // Re-render with original order
     filterLanguages();
 
-    // Scroll to the gallery section (just below the sticky filter bar)
+    // Scroll to show filter bar at top with cards visible below
     setTimeout(() => {
-        const gallery = document.querySelector('.gallery');
-        if (gallery) {
-            gallery.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+        const filterBar = document.querySelector('.filter-bar');
+        if (filterBar) {
+            const filterBarTop = filterBar.offsetTop;
+            window.scrollTo({
+                top: filterBarTop,
+                behavior: 'smooth'
             });
         }
     }, 100);
