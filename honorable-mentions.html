@@ -26,6 +26,69 @@
 
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Navigation Bar */
+        nav {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #e8e8f0;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e8e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .nav-links a.active {
+            color: #ffd700;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ffd700;
+        }
+
         .honorable-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -214,7 +277,7 @@
 <body>
     <nav>
         <div class="nav-content">
-            <div class="logo">hello,worlds.io</div>
+            <div class="logo">hello,<span>worlds</span>.io</div>
             <div class="nav-links">
                 <a href="index.html">Gallery</a>
                 <a href="lineage.html">Lineage</a>
@@ -227,7 +290,10 @@
     <div class="honorable-container">
         <div class="intro">
             <h1>Honorable Mentions</h1>
-            <p>These languages didn't make the main collection, but deserve recognition. Vote for your favorites—when a language reaches 100 votes, we'll review it for inclusion!</p>
+            <p>These languages didn't make the main collection, but deserve recognition. <strong>Vote for your favorites</strong> or <strong>suggest new languages</strong>—when a language reaches 100 votes, we'll review it for inclusion!</p>
+            <p style="margin-top: 1rem; font-size: 0.95em; color: #9a9aa8;">
+                💡 Don't see a language you want? <a href="https://github.com/scttfrdmn/helloworlds/issues/new?title=Suggest%20Language:%20" target="_blank" style="color: #ffd700; text-decoration: underline;">Suggest it on GitHub</a>
+            </p>
         </div>
 
         <!-- VARIANTS & DIALECTS -->
@@ -244,7 +310,7 @@
                         <div class="mention-year">1983 • Borland</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">47 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -271,7 +337,7 @@
                         <div class="mention-year">1984 • Leslie Lamport</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">89 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -298,7 +364,7 @@
                         <div class="mention-year">1985 • Microsoft</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">34 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -333,7 +399,7 @@
                         <div class="mention-year">1980s • U.S. Department of Defense</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">23 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -360,7 +426,7 @@
                         <div class="mention-year">1986 • National Instruments</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">31 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -387,7 +453,7 @@
                         <div class="mention-year">1956 • Stephen Kleene</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">67 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -422,7 +488,7 @@
                         <div class="mention-year">1989 • Microsoft</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">42 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -449,7 +515,7 @@
                         <div class="mention-year">1996 • PostgreSQL</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">38 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -484,7 +550,7 @@
                         <div class="mention-year">TBD • Jonathan Blow</div>
                     </div>
                     <div class="vote-section">
-                        <div class="vote-count">156 👍</div>
+                        <div class="vote-count">0 👍</div>
                         <button class="vote-button" onclick="vote(this)">Vote to Include</button>
                     </div>
                 </div>
@@ -516,19 +582,30 @@
     <script>
         function vote(button) {
             if (button.classList.contains('voted')) return;
-            
+
+            // Check if user has identified themselves
+            let userIdentity = localStorage.getItem('voter-identity');
+            if (!userIdentity) {
+                userIdentity = prompt('To vote, please enter your GitHub username or email:');
+                if (!userIdentity || userIdentity.trim() === '') {
+                    alert('You must identify yourself to vote. This helps prevent spam.');
+                    return;
+                }
+                localStorage.setItem('voter-identity', userIdentity.trim());
+            }
+
             const voteCount = button.parentElement.querySelector('.vote-count');
             const currentCount = parseInt(voteCount.textContent);
             voteCount.textContent = `${currentCount + 1} 👍`;
-            
+
             button.textContent = 'Voted!';
             button.classList.add('voted');
-            
-            // Store vote in localStorage
+
+            // Store vote in localStorage with user identity
             const card = button.closest('.mention-card');
             const languageName = card.querySelector('.mention-name').textContent;
-            localStorage.setItem(`voted-${languageName}`, 'true');
-            
+            localStorage.setItem(`voted-${languageName}`, userIdentity);
+
             // Check if threshold reached
             if (currentCount + 1 >= 100) {
                 const notice = document.createElement('div');
