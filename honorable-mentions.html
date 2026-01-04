@@ -24,6 +24,15 @@
     <!-- Additional Meta Tags -->
     <meta name="description" content="Notable programming languages that didn't make the main collection. Variants, dialects, historical, and specialized languages with interesting stories.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffd700">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -131,9 +140,46 @@
     <section style="padding: var(--spacing-lg) 0; text-align: center; border-bottom: 1px solid var(--color-border);">
         <div class="container">
             <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; margin-bottom: var(--spacing-sm); background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent-soft) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Honorable Mentions</h1>
-            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--color-text-dim); max-width: 600px; margin: 0 auto;">Languages that didn't make the main collection, but deserve recognition</p>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--color-text-dim); max-width: 700px; margin: 0 auto 1.5rem;">Languages that didn't make the main collection, but deserve recognition</p>
+
+            <details style="max-width: 800px; margin: 0 auto; text-align: left; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--color-border); border-radius: 8px; padding: 1rem;">
+                <summary style="cursor: pointer; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; color: var(--color-accent); list-style: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="display: inline-block; transition: transform 0.2s;">▶</span> What gets a language into the main collection?
+                </summary>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.95rem; line-height: 1.7; color: var(--color-text-dim);">
+                    <p style="margin-bottom: 0.75rem;">To be included in the main gallery, a language must meet these criteria:</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--color-accent);">✓</span>
+                            <strong>Distinct language:</strong> Not a variant, dialect, or compiler of an existing language
+                        </li>
+                        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--color-accent);">✓</span>
+                            <strong>General-purpose or historically significant:</strong> Not limited to a single platform or application
+                        </li>
+                        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--color-accent);">✓</span>
+                            <strong>Stable and released:</strong> Past 1.0 or widely adopted in production
+                        </li>
+                        <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--color-accent);">✓</span>
+                            <strong>Meaningful adoption:</strong> Has a community, documentation, and real-world usage
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--color-accent);">✓</span>
+                            <strong>Not superseded:</strong> If a newer version exists in the collection, older versions are honorary
+                        </li>
+                    </ul>
+                </div>
+            </details>
         </div>
     </section>
+
+    <style>
+        details[open] summary span {
+            transform: rotate(90deg);
+        }
+    </style>
 
     <div class="filter-bar">
         <div class="container">

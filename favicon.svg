@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0f; }
+      .h { fill: #e8e8f0; font-family: 'Georgia', serif; font-weight: 900; font-style: italic; }
+      .w { fill: #ffd700; font-family: 'Georgia', serif; font-weight: 900; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="100" height="100" rx="20"/>
+
+  <!-- "h" for hello -->
+  <text class="h" x="25" y="70" font-size="60">h</text>
+
+  <!-- "w" for worlds -->
+  <text class="w" x="48" y="70" font-size="60">w</text>
+</svg>
