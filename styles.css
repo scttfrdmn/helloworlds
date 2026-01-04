@@ -150,19 +150,17 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     padding-top: 15vh;
     padding-bottom: 10rem;
-    padding-left: 10vw;
-    padding-right: 10vw;
     position: relative;
     background: radial-gradient(ellipse at top, rgba(255, 215, 0, 0.05) 0%, transparent 60%),
                 radial-gradient(ellipse at bottom right, rgba(0, 217, 255, 0.03) 0%, transparent 50%);
 }
 
 .hero-content {
-    max-width: 1200px;
+    text-align: center;
     animation: fadeInUp 1s var(--transition-smooth) backwards;
 }
 
@@ -172,7 +170,6 @@ body {
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-accent);
-    text-align: center;
     margin-bottom: var(--spacing-sm);
     opacity: 0;
     animation: fadeIn 1s var(--transition-smooth) 0.2s forwards;
@@ -186,6 +183,7 @@ body {
     margin-bottom: var(--spacing-md);
     position: relative;
     text-align: left;
+    display: inline-block;
 }
 
 .title-line {
@@ -214,7 +212,6 @@ body {
     color: var(--color-text-dim);
     max-width: 600px;
     margin: 0 auto var(--spacing-lg);
-    text-align: center;
     opacity: 0;
     animation: fadeIn 1s var(--transition-smooth) 0.7s forwards;
 }
