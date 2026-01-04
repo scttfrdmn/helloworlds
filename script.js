@@ -447,6 +447,35 @@ document.getElementById('orderControlBtn')?.addEventListener('click', () => {
     }
 });
 
+// Set up reset button
+document.getElementById('resetBtn')?.addEventListener('click', () => {
+    const searchInput = document.getElementById('search');
+    const searchClear = document.getElementById('searchClear');
+
+    // Clear search
+    searchInput.value = '';
+    currentSearch = '';
+    searchClear.style.display = 'none';
+
+    // Reset filter to "All"
+    currentFilter = 'all';
+    document.querySelectorAll('.filter-tag').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === 'all') {
+            btn.classList.add('active');
+        }
+    });
+
+    // Re-render with original order
+    filterLanguages();
+
+    // Scroll to top (to the filter bar)
+    document.querySelector('.filter-bar').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
 // Initial render with randomized order
 updateStats();
 currentLanguageOrder = getLanguageOrder();
