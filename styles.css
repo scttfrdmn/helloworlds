@@ -577,6 +577,20 @@ body {
     border-top: 1px solid var(--color-border);
 }
 
+.author-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.7;
+}
+
+.author-entry + .author-entry {
+    margin-top: var(--spacing-md);
+}
+
 .author-name {
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -585,6 +599,13 @@ body {
     letter-spacing: 0.05em;
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
+}
+
+.author-org {
+    color: var(--color-text-dim);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .author-bio {

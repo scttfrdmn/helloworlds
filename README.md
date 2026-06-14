@@ -3,7 +3,7 @@
 **A beautiful, curated collection of "Hello, World!" implementations across every programming language imaginable.**
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Languages](https://img.shields.io/badge/languages-134-gold.svg)
+![Languages](https://img.shields.io/badge/languages-128-gold.svg)
 ![Binary](https://img.shields.io/badge/book-10000000%20ways-brightgreen.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
@@ -20,8 +20,7 @@ helloworlds.io celebrates the universal tradition of "Hello, World!"—the first
 
 ### Features
 
-🎊 **134 Programming Languages** on the website  
-📖 **Curating down to 128** (`0b10000000`) for the book  
+🎊 **128 Programming Languages** (`0b10000000`)—the exact binary milestone the book is named for  
 🎁 **Perfect gift** for the programmer in your life  
 🏆 **Complete Timeline** - From Assembly (1949) to Bend (2024)  
 🌟 **Every Era** - Including 2019-2025 modern languages (Mojo, Carbon, Gleam, Roc, Bend, Odin, Unison)  
@@ -29,7 +28,7 @@ helloworlds.io celebrates the universal tradition of "Hello, World!"—the first
 🎨 **19 Esoteric Languages** - Chef (recipes!), Rockstar (lyrics!), ArnoldC (Schwarzenegger!), Velato (music!)  
 🔧 **Six Architectures** - Assembly, x86, ARM, 6502, MIPS, RISC-V  
 📖 **Origin Story** - Brian Kernighan's "Hello, World!" tradition  
-👥 **Creator Biographies** - Meet 134+ legendary programmers  
+👥 **Creator Biographies** - Meet 128+ legendary programmers  
 🌳 **Interactive Lineage Graph** - Explore influence relationships  
 🗳️ **Honorable Mentions** - Vote for languages to include next!  
 🎯 **Smart Filtering** - By paradigm, decade, and use case  
@@ -198,7 +197,7 @@ We'd love your help expanding this collection! Here's how to contribute:
 - **Esoteric**: Brainfuck, Whitespace, LOLCODE, Shakespeare, Piet
 
 ### By Domain
-- **Web**: JavaScript, TypeScript, PHP, HTML, CSS
+- **Web**: JavaScript, TypeScript, PHP, Dart, Elm
 - **Systems**: C, C++, Rust, Assembly, Go, Zig
 - **Scientific**: Fortran, MATLAB, R, Julia
 - **Enterprise**: Java, C#, COBOL, Ada
@@ -253,10 +252,9 @@ helloworlds.io is designed with several principles:
 
 ### 📊 Current Collection
 
-**Website: 134 languages** (and growing!)  
-**Book target: 128 languages** = `0b10000000` = **10000000 Ways to Say Hello**
+**Website: 128 languages** = `0b10000000` = **10000000 Ways to Say Hello**
 
-*134 languages on the website, curated to exactly 128 for the book—because every programmer will smile at that binary joke.*
+*Exactly 128 languages—because every programmer will smile at that binary joke. The website and the book share the same curated collection.*
 
 ### 🆕 Latest Additions (2019-2025)
 
@@ -277,12 +275,12 @@ The collection now includes cutting-edge languages from the past 6 years:
 
 ### The Complete Collection Stats:
 
-- **134 programming languages** across 75 years (1949-2024)
+- **128 programming languages** across 75 years (1949-2024)
 - **6 processor architectures** - Assembly, x86, 6502, ARM, MIPS, RISC-V
 - **19 esoteric languages** - From INTERCAL (1972, the first!) to Bend (2024)
 - **19+ programming paradigms** - Including musical, culinary, and cinematic!
 - **Complete lineage** - All influence relationships documented
-- **134+ creators** - From Knuth to Lattner to Schwarzenegger
+- **128+ creators** - From Knuth to Lattner to Schwarzenegger
 
 ---
 

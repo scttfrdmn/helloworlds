@@ -17,15 +17,24 @@ function renderLanguages(languagesToRender) {
             `<span class="language-tag">${tag}</span>`
         ).join('');
         
-        // Author section
+        // Author section — one block per person, each with their own bio
         let authorHTML = '';
         if (lang.authors && lang.authors.length > 0) {
-            const authorNames = lang.authors.map(a => a.name).join(', ');
-            const authorBio = lang.authors[0].bio; // Show first author's bio
+            const label = lang.authors.length > 1 ? 'Created by' : 'Created by';
+            const peopleHTML = lang.authors.map(a => {
+                const orgHTML = a.org ? ` <span class="author-org">· ${a.org}</span>` : '';
+                const bioHTML = a.bio ? `<div class="author-bio">${a.bio}</div>` : '';
+                return `
+                    <div class="author-entry">
+                        <div class="author-name">${a.name}${orgHTML}</div>
+                        ${bioHTML}
+                    </div>
+                `;
+            }).join('');
             authorHTML = `
                 <div class="language-author">
-                    <div class="author-name">Created by ${authorNames}</div>
-                    <div class="author-bio">${authorBio}</div>
+                    <div class="author-label">${label}</div>
+                    ${peopleHTML}
                 </div>
             `;
         }

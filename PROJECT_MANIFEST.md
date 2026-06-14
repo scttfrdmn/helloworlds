@@ -8,7 +8,7 @@
 ### 🌐 Core Website Files (Ready to Deploy)
 
 **HTML Pages (4):**
-- `index.html` - Main gallery with all 134 languages
+- `index.html` - Main gallery with all 128 languages
 - `lineage.html` - Interactive D3.js influence graph  
 - `origins.html` - Brian Kernighan's "Hello, World!" story
 - `honorable-mentions.html` - Voting system for languages to add
@@ -19,7 +19,7 @@
 - `origins-styles.css` - Editorial/magazine style for origins page
 
 **JavaScript (3):**
-- `languages.js` - **134 LANGUAGES** with full data, bios, code samples
+- `languages.js` - **128 LANGUAGES** with full data, bios, code samples
 - `script.js` - Gallery functionality (search, filter, copy)
 - `lineage.js` - D3.js graph rendering
 
@@ -31,7 +31,7 @@
 
 ## 📊 Current Stats
 
-**Languages: 134**
+**Languages: 128**
 - 1949 (Assembly) → 2024 (Bend)
 - 75 years of programming history
 - Complete lineage coverage
@@ -72,7 +72,7 @@
 ### ✅ COMPLETED
 
 **Website:**
-- [x] 134 languages with complete data
+- [x] 128 languages with complete data
 - [x] Beautiful dark theme design
 - [x] Search functionality
 - [x] Filter by paradigm (compiled, interpreted, functional, OOP, esoteric, web, system)
@@ -82,7 +82,7 @@
 - [x] Origins story page (Brian Kernighan tribute)
 - [x] Interactive lineage graph (D3.js)
 - [x] Honorable Mentions page with voting
-- [x] Creator biographies for all 134 languages
+- [x] Creator biographies for all 128 languages
 - [x] Complete influence relationships
 - [x] Keyboard shortcuts (/ to search, Escape to clear)
 
@@ -173,7 +173,7 @@ git push -u origin main
 **Target:** Kickstarter launch in 6 months
 
 **Book Specs:**
-- **128 languages** (curated from website's 134)
+- **128 languages** (the same curated collection as the website)
 - 8" × 10" landscape hardcover
 - 300+ pages, full color
 - Smyth-sewn binding (lays flat)
@@ -422,7 +422,7 @@ hello@helloworlds.io
 - 🌍 Celebration of our craft
 
 **From one simple example in 1972...**  
-**To 134 languages celebrating that tradition...**  
+**To 128 languages celebrating that tradition...**  
 **To a beautiful book preserving it forever.**
 
 ---
@@ -435,7 +435,7 @@ hello@helloworlds.io
 
 **Special Thanks:**
 - Brian Kernighan (creator of "Hello, World!")
-- All 134+ language creators
+- All 128+ language creators
 - The programming community
 - Claude (for help building this!)
 
@@ -455,4 +455,4 @@ git init
 **The journey begins! 🚀📚✨**
 
 *Last updated: January 3, 2026*
-*helloworlds.io - 134 languages and counting!*
+*helloworlds.io - 128 languages, the perfect binary milestone!*
