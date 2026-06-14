@@ -140,56 +140,47 @@ function renderLanguages(languagesToRender) {
     });
 }
 
-// Get appropriate language class for syntax highlighting
+// Get appropriate highlight.js grammar for a language. Some entries are
+// aliased to a close relative (e.g. Raku→perl, Mojo→python, ML→ocaml,
+// Pascal-family→delphi, assembly variants→x86asm/armasm/mipsasm) so they
+// render with real highlighting instead of falling through to plaintext.
+// Languages with no suitable grammar map to 'plaintext' and are normalized
+// to the same brightness as highlighted code via CSS.
 function getLanguageClass(langName) {
     const mapping = {
-        'C': 'c',
-        'C++': 'cpp',
-        'JavaScript': 'javascript',
-        'TypeScript': 'typescript',
-        'Python': 'python',
-        'Java': 'java',
-        'Rust': 'rust',
-        'Go': 'go',
-        'Ruby': 'ruby',
-        'PHP': 'php',
-        'Swift': 'swift',
-        'Kotlin': 'kotlin',
-        'Haskell': 'haskell',
-        'Lisp': 'lisp',
-        'Scheme': 'scheme',
-        'Clojure': 'clojure',
-        'Elixir': 'elixir',
-        'Erlang': 'erlang',
-        'Scala': 'scala',
-        'Perl': 'perl',
-        'R': 'r',
-        'MATLAB': 'matlab',
-        'Julia': 'julia',
-        'Fortran': 'fortran',
-        'COBOL': 'cobol',
-        'Assembly (x86)': 'x86asm',
-        'Bash': 'bash',
-        'PowerShell': 'powershell',
-        'Lua': 'lua',
-        'Dart': 'dart',
-        'OCaml': 'ocaml',
-        'F#': 'fsharp',
-        'Zig': 'zig',
-        'Crystal': 'crystal',
-        'Nim': 'nim',
-        'V': 'v',
-        'HTML': 'html',
-        'CSS': 'css',
-        'SQL': 'sql',
-        'Prolog': 'prolog',
-        'Ada': 'ada',
-        'Pascal': 'pascal',
-        'Objective-C': 'objectivec',
-        'Smalltalk': 'smalltalk',
-        'BASIC': 'basic'
+        // Direct grammar matches
+        'Python': 'python', 'JavaScript': 'javascript', 'C': 'c', 'C++': 'cpp',
+        'Java': 'java', 'Rust': 'rust', 'Go': 'go', 'Ruby': 'ruby', 'PHP': 'php',
+        'Swift': 'swift', 'Kotlin': 'kotlin', 'TypeScript': 'typescript',
+        'Haskell': 'haskell', 'Lisp': 'lisp', 'Scheme': 'scheme', 'Clojure': 'clojure',
+        'Elixir': 'elixir', 'Erlang': 'erlang', 'Scala': 'scala', 'Perl': 'perl',
+        'R': 'r', 'MATLAB': 'matlab', 'Julia': 'julia', 'Fortran': 'fortran',
+        'Bash': 'bash', 'PowerShell': 'powershell', 'Lua': 'lua', 'Dart': 'dart',
+        'OCaml': 'ocaml', 'F#': 'fsharp', 'Crystal': 'crystal', 'Nim': 'nim',
+        'SQL': 'sql', 'Prolog': 'prolog', 'Ada': 'ada', 'Pascal': 'delphi',
+        'Objective-C': 'objectivec', 'Smalltalk': 'smalltalk', 'BASIC': 'basic',
+        'C#': 'csharp', 'Visual Basic': 'vbnet', 'Common Lisp': 'lisp',
+        'AWK': 'awk', 'Racket': 'scheme', 'Emacs Lisp': 'lisp', 'D': 'd',
+        'Groovy': 'groovy', 'Elm': 'elm', 'Vala': 'vala', 'Delphi': 'delphi',
+        'ActionScript': 'actionscript', 'Tcl': 'tcl', 'SAS': 'sas',
+        'Brainfuck': 'brainfuck',
+        // Aliases to a close relative
+        'Raku': 'perl', 'Mojo': 'python', 'Carbon': 'cpp', 'Solidity': 'javascript',
+        'Hack': 'php', 'Zsh': 'bash', 'Fish': 'bash', 'PL/SQL': 'sql',
+        'ML': 'ocaml', 'Standard ML': 'ocaml', 'Roc': 'ocaml',
+        'Miranda': 'haskell', 'Idris': 'haskell', 'PureScript': 'haskell',
+        'Gleam': 'rust', 'Modula-2': 'delphi', 'Modula-3': 'delphi',
+        'Oberon': 'delphi', 'Simula': 'delphi', 'Self': 'smalltalk',
+        'Wolfram Language': 'mathematica', 'Assembly': 'x86asm',
+        'x86 Assembly': 'x86asm', '6502 Assembly': 'x86asm',
+        'ARM Assembly': 'armasm', 'MIPS Assembly': 'mipsasm',
+        'RISC-V Assembly': 'mipsasm', 'Ook!': 'brainfuck',
+        // C-family and curly-brace aliases for languages without their own grammar
+        'Zig': 'cpp', 'V': 'go', 'Odin': 'cpp', 'Pony': 'cpp',
+        'Wren': 'javascript', 'Io': 'ruby', 'Chapel': 'cpp',
+        'PL/I': 'delphi', 'Dylan': 'lisp', 'Eiffel': 'delphi'
     };
-    
+
     return mapping[langName] || 'plaintext';
 }
 
