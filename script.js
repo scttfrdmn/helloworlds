@@ -24,10 +24,18 @@ function renderLanguages(languagesToRender) {
             const peopleHTML = lang.authors.map(a => {
                 const orgHTML = a.org ? ` <span class="author-org">· ${a.org}</span>` : '';
                 const bioHTML = a.bio ? `<div class="author-bio">${a.bio}</div>` : '';
+                let sourcesHTML = '';
+                if (a.sources && a.sources.length > 0) {
+                    const links = a.sources.map(s =>
+                        `<a class="author-source" href="${s.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.title)}</a>`
+                    ).join('');
+                    sourcesHTML = `<div class="author-sources"><span class="author-sources-label">Sources</span>${links}</div>`;
+                }
                 return `
                     <div class="author-entry">
                         <div class="author-name">${a.name}${orgHTML}</div>
                         ${bioHTML}
+                        ${sourcesHTML}
                     </div>
                 `;
             }).join('');

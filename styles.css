@@ -614,6 +614,36 @@ body {
     line-height: 1.6;
 }
 
+.author-sources {
+    margin-top: var(--spacing-xs);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.author-sources-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-dim);
+    opacity: 0.6;
+}
+
+.author-source {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-border);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.author-source:hover {
+    color: var(--color-highlight);
+    border-bottom-color: var(--color-highlight);
+}
+
 /* Language Relationships */
 .language-relationships {
     margin-top: var(--spacing-md);
