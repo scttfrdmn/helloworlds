@@ -17,7 +17,7 @@ function renderLanguages(languagesToRender) {
             `<span class="language-tag">${tag}</span>`
         ).join('');
         
-        // Author section — one block per person, each with their own bio
+        // Author section: one block per person, each with their own bio
         let authorHTML = '';
         if (lang.authors && lang.authors.length > 0) {
             const label = lang.authors.length > 1 ? 'Created by' : 'Created by';

@@ -20,7 +20,7 @@ helloworlds.io celebrates the universal tradition of "Hello, World!"—the first
 
 ### Features
 
-🎊 **128 Programming Languages** (`0b10000000`)—exactly the binary milestone that gives the project its name  
+🎊 **128 Programming Languages** (`0b10000000`), exactly the binary milestone that gives the project its name  
 🎁 **Perfect gift** for the programmer in your life  
 🏆 **Complete Timeline** - From Assembly (1949) to Bend (2024)  
 🌟 **Every Era** - Including 2019-2025 modern languages (Mojo, Carbon, Gleam, Roc, Bend, Odin, Unison)  
@@ -254,7 +254,7 @@ helloworlds.io is designed with several principles:
 
 **128 languages** = `0b10000000` = **10000000 Ways to Say Hello**
 
-*Exactly 128 languages—because every programmer will smile at that binary joke.*
+*Exactly 128 languages, because every programmer will smile at that binary joke.*
 
 ### 🆕 Latest Additions (2019-2025)
 

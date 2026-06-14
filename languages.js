@@ -15,7 +15,7 @@ const languages = [
         tags: ["scripting", "oop", "functional"],
         code: `print("Hello, World!")`,
         filename: "hello.py",
-        description: "Python's elegant syntax makes the classic greeting refreshingly simple—just a single line that embodies its philosophy of readability.",
+        description: "Python's elegant syntax makes the classic greeting refreshingly simple, just a single line that embodies its philosophy of readability.",
         influences: ["ABC", "Modula-3", "C", "Perl", "Smalltalk", "AWK"],
         influenced: ["Ruby", "Swift", "Go", "Julia", "Nim", "Groovy", "Ring", "Mojo", "Solidity"]
     },
@@ -46,7 +46,7 @@ const languages = [
             {
                 name: "Dennis Ritchie",
                 org: "",
-                bio: "Created C at Bell Labs while working on Unix. His work fundamentally shaped modern computing—C became the foundation for countless languages and operating systems. Received the Turing Award in 1983 alongside Ken Thompson. Passed away in 2011, one week after Steve Jobs.",
+                bio: "Created C at Bell Labs while working on Unix. His work fundamentally shaped modern computing, C became the foundation for countless languages and operating systems. Received the Turing Award in 1983 alongside Ken Thompson. Passed away in 2011, one week after Steve Jobs.",
                 sources: [
                     { title: "Wikipedia: Dennis Ritchie", url: "https://en.wikipedia.org/wiki/Dennis_Ritchie", type: "encyclopedia" }
                 ]
@@ -109,7 +109,7 @@ int main() {
     }
 }`,
         filename: "HelloWorld.java",
-        description: "Java's verbosity is deliberate—every greeting exists within a class, teaching the fundamentals of object-oriented design from day one.",
+        description: "Java's verbosity is deliberate, every greeting exists within a class, teaching the fundamentals of object-oriented design from day one.",
         influences: ["C++", "Smalltalk", "Objective-C", "Modula-3", "C", "Eiffel"],
         influenced: ["Kotlin", "Scala", "Dart", "JavaScript", "C#", "Groovy", "ActionScript"]
     },
@@ -194,7 +194,7 @@ func main() {
         tags: ["scripting", "oop"],
         code: `puts "Hello, World!"`,
         filename: "hello.rb",
-        description: "Designed for programmer happiness, Ruby's greeting reads like poetry—minimal syntax, maximum expressiveness.",
+        description: "Designed for programmer happiness, Ruby's greeting reads like poetry, minimal syntax, maximum expressiveness.",
         influences: ["Perl", "Smalltalk", "Lisp", "Python", "Scheme"],
         influenced: ["Elixir", "Crystal", "Swift", "Groovy"]
     },
@@ -205,7 +205,7 @@ func main() {
             {
                 name: "Rasmus Lerdorf",
                 org: "",
-                bio: "Danish-Canadian programmer who created PHP (Personal Home Page Tools) to maintain his personal homepage. Never intended to create a programming language—it evolved organically as a template system. PHP now runs roughly 70% of all websites whose server-side language is known, including WordPress.",
+                bio: "Danish-Canadian programmer who created PHP (Personal Home Page Tools) to maintain his personal homepage. Never intended to create a programming language, it evolved organically as a template system. PHP now runs roughly 70% of all websites whose server-side language is known, including WordPress.",
                 sources: [
                     { title: "W3Techs: Usage of PHP for websites", url: "https://w3techs.com/technologies/details/pl-php", type: "statistics" },
                     { title: "Wikipedia: PHP", url: "https://en.wikipedia.org/wiki/PHP", type: "encyclopedia" }
@@ -316,7 +316,7 @@ echo "Hello, World!";
         code: `main :: IO ()
 main = putStrLn "Hello, World!"`,
         filename: "hello.hs",
-        description: "Pure functional programming greets through monadic IO actions—even 'Hello, World!' is a mathematical transformation.",
+        description: "Pure functional programming greets through monadic IO actions, even 'Hello, World!' is a mathematical transformation.",
         influences: ["ML", "Miranda", "Standard ML"],
         influenced: ["Rust", "Swift", "F#", "Scala", "Raku", "Elm", "PureScript", "Idris", "Bend", "Unison"]
     },
@@ -508,7 +508,7 @@ world() -> io:fwrite("Hello, World!~n").`,
         tags: ["scripting", "functional", "oop"],
         code: `say "Hello, World!";`,
         filename: "hello.raku",
-        description: "Perl's ambitious reinvention. After a 15-year gestation, Raku emerged as its own language—gradually typed, grammar-driven, and unapologetically expressive.",
+        description: "Perl's ambitious reinvention. After a 15-year gestation, Raku emerged as its own language, gradually typed, grammar-driven, and unapologetically expressive.",
         influences: ["Perl", "Haskell", "Smalltalk"],
         influenced: []
     },
@@ -1167,7 +1167,7 @@ pub fn main() !void {
             {
                 name: "Urban Müller",
                 org: "",
-                bio: "Swiss student who created Brainfuck to design the smallest possible compiler—his original Amiga implementation was only a few hundred bytes. Consists of only 8 commands, making it Turing-complete but deliberately difficult to program in. A parody of minimalist language design.",
+                bio: "Swiss student who created Brainfuck to design the smallest possible compiler, his original Amiga implementation was only a few hundred bytes. Consists of only 8 commands, making it Turing-complete but deliberately difficult to program in. A parody of minimalist language design.",
                 sources: [
                     { title: "Wikipedia: Brainfuck", url: "https://en.wikipedia.org/wiki/Brainfuck", type: "encyclopedia" }
                 ]
@@ -1205,7 +1205,7 @@ pub fn main() !void {
         tags: ["esoteric", "scripting"],
         code: `   \t  \t   \n\t\n     \t\t  \t \t\n\t\n     \t\t \t\t  \n\t\n     \t\t \t\t  \n\t\n     \t\t \t\t\t\t\n\t\n     \t \t\t  \n\t\n     \t     \n\t\n     \t\t\t \t\t\t\n\t\n     \t\t \t\t\t\t\n\t\n     \t\t\t  \t\n\t\n     \t\t \t\t  \n\t\n     \t\t  \t  \n\t\n  \n\n\n`,
         filename: "hello.ws",
-        description: "Only whitespace characters are meaningful. The greeting is invisible to the human eye—a meditation on code's essence.",
+        description: "Only whitespace characters are meaningful. The greeting is invisible to the human eye, a meditation on code's essence.",
         influences: [],
         influenced: []
     },
@@ -1698,7 +1698,7 @@ LET start() = VALOF
             {
                 name: "Niklaus Wirth",
                 org: "",
-                bio: "Wirth's successor to Pascal, created at ETH Zürich for the Lilith workstation. Added modules for separate compilation, coroutines, and low-level hardware access—turning Pascal's teaching language into a systems-programming tool. A key step on the road from Pascal to Oberon.",
+                bio: "Wirth's successor to Pascal, created at ETH Zürich for the Lilith workstation. Added modules for separate compilation, coroutines, and low-level hardware access, turning Pascal's teaching language into a systems-programming tool. A key step on the road from Pascal to Oberon.",
                 sources: [
                     { title: "Wikipedia: Niklaus Wirth", url: "https://en.wikipedia.org/wiki/Niklaus_Wirth", type: "encyclopedia" }
                 ]
@@ -1723,7 +1723,7 @@ END Hello.`,
             {
                 name: "Niklaus Wirth",
                 org: "",
-                bio: "Wirth's final language, designed alongside the Oberon operating system at ETH Zürich. Distilled Modula-2 to its essence—'as simple as possible, but not simpler'—adding type extension for object orientation while removing features Wirth deemed unnecessary. The culmination of his lifelong pursuit of minimalism.",
+                bio: "Wirth's final language, designed alongside the Oberon operating system at ETH Zürich. Distilled Modula-2 to its essence, 'as simple as possible, but not simpler', adding type extension for object orientation while removing features Wirth deemed unnecessary. The culmination of his lifelong pursuit of minimalism.",
                 sources: [
                     { title: "Wikipedia: Niklaus Wirth", url: "https://en.wikipedia.org/wiki/Niklaus_Wirth", type: "encyclopedia" }
                 ]
@@ -2045,7 +2045,7 @@ HELLO`,
             {
                 name: "Richard Stallman",
                 org: "",
-                bio: "Created Emacs Lisp for the GNU Emacs editor. Stallman founded the Free Software Foundation and launched the GNU Project. Emacs Lisp makes the editor infinitely extensible—it's been called 'an operating system disguised as a text editor.' Millions use Emacs daily, customizing it with Elisp.",
+                bio: "Created Emacs Lisp for the GNU Emacs editor. Stallman founded the Free Software Foundation and launched the GNU Project. Emacs Lisp makes the editor infinitely extensible, it's been called 'an operating system disguised as a text editor.' Millions use Emacs daily, customizing it with Elisp.",
                 sources: [
                     { title: "Wikipedia: Emacs Lisp", url: "https://en.wikipedia.org/wiki/Emacs_Lisp", type: "encyclopedia" }
                 ]
@@ -2251,7 +2251,7 @@ END;
             {
                 name: "David Turner",
                 org: "",
-                bio: "British computer scientist who created Miranda at the University of Kent—one of the first commercially supported purely functional lazy languages. Its clean design and list-comprehension notation (which Turner called 'ZF expressions') strongly influenced the creation of Haskell. Turner died in 2023.",
+                bio: "British computer scientist who created Miranda at the University of Kent, one of the first commercially supported purely functional lazy languages. Its clean design and list-comprehension notation (which Turner called 'ZF expressions') strongly influenced the creation of Haskell. Turner died in 2023.",
                 sources: [
                     { title: "Wikipedia: Miranda (programming language)", url: "https://en.wikipedia.org/wiki/Miranda_(programming_language)", type: "encyclopedia" },
                     { title: "Wikipedia: David Turner", url: "https://en.wikipedia.org/wiki/David_Turner_(computer_scientist)", type: "encyclopedia" }
@@ -2580,7 +2580,7 @@ run;`,
         tags: ["esoteric", "scripting"],
         code: `(=<\`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?\`=*z]Kw%oG4UUS0/@-ejc(:'8dc`,
         filename: "hello.mal",
-        description: "Dante's programming inferno. Malbolge is intentionally the hardest language—the first Hello World took two years to create.",
+        description: "Dante's programming inferno. Malbolge is intentionally the hardest language, the first Hello World took two years to create.",
         influences: ["INTERCAL"],
         influenced: []
     },
@@ -2591,7 +2591,7 @@ run;`,
             {
                 name: "Torbjörn Söderstedt",
                 org: "",
-                bio: "Created the Chicken language where the only valid keyword is 'chicken'. Number of 'chicken's and punctuation determine the operation. A brilliant parody of programming language minimalism. Demonstrates that syntax is just convention—computation can happen with any symbols.",
+                bio: "Created the Chicken language where the only valid keyword is 'chicken'. Number of 'chicken's and punctuation determine the operation. A brilliant parody of programming language minimalism. Demonstrates that syntax is just convention, computation can happen with any symbols.",
                 sources: [
                     { title: "Esolang: Chicken", url: "https://esolangs.org/wiki/Chicken", type: "encyclopedia" }
                 ]
@@ -2849,7 +2849,7 @@ Put potatoes into the mixing bowl. Put dijon mustard into the mixing bowl. Put l
 
 Serves 1.`,
         filename: "hello.chef",
-        description: "Programs as recipes. Chef proves code can be delicious—each program is a valid recipe you could actually cook.",
+        description: "Programs as recipes. Chef proves code can be delicious, each program is a valid recipe you could actually cook.",
         influences: [],
         influenced: []
     },
@@ -2879,7 +2879,7 @@ Shout "Hello "
 If Desire is hate,
 Say "World!"`,
         filename: "hello.rock",
-        description: "Code that rocks. Rockstar lets you write programs as 80s power ballad lyrics—poetic variables and all.",
+        description: "Code that rocks. Rockstar lets you write programs as 80s power ballad lyrics, poetic variables and all.",
         influences: [],
         influenced: []
     },
@@ -2901,7 +2901,7 @@ Say "World!"`,
 TALK TO THE HAND "Hello, World!"
 YOU HAVE BEEN TERMINATED`,
         filename: "hello.arnoldc",
-        description: "I'll be back... with Hello World! ArnoldC speaks only in Schwarzenegger quotes—IT'S SHOWTIME to begin, TERMINATED to end.",
+        description: "I'll be back... with Hello World! ArnoldC speaks only in Schwarzenegger quotes, IT'S SHOWTIME to begin, TERMINATED to end.",
         influences: [],
         influenced: []
     },
@@ -2912,7 +2912,7 @@ YOU HAVE BEEN TERMINATED`,
             {
                 name: "Daniel Temkin",
                 org: "",
-                bio: "Artist and programmer exploring the aesthetic possibilities of code. Created Velato where programs are MIDI music files—pitch sequences encode instructions. Also created Entropy (code degrades over time) and other conceptual languages. Shows programming as performance art. Based in New York.",
+                bio: "Artist and programmer exploring the aesthetic possibilities of code. Created Velato where programs are MIDI music files, pitch sequences encode instructions. Also created Entropy (code degrades over time) and other conceptual languages. Shows programming as performance art. Based in New York.",
                 sources: [
                     { title: "Esolang: Velato", url: "https://esolangs.org/wiki/Velato", type: "encyclopedia" }
                 ]
@@ -2921,7 +2921,7 @@ YOU HAVE BEEN TERMINATED`,
         tags: ["esoteric", "scripting"],
         code: `[Musical notation encoding: This would be a MIDI file where specific note sequences encode "Hello, World!" - the pitches C D E F G A B in specific patterns create the output]`,
         filename: "hello.velato",
-        description: "Listen to your code. Velato programs are MIDI music—you can hear your Hello World as a melody.",
+        description: "Listen to your code. Velato programs are MIDI music, you can hear your Hello World as a melody.",
         influences: [],
         influenced: []
     },
@@ -2953,7 +2953,7 @@ YOU HAVE BEEN TERMINATED`,
             {
                 name: "David Morgan-Mar",
                 org: "",
-                bio: "Morgan-Mar strikes again! Ook! is Brainfuck for orangutans—only 'Ook.', 'Ook?', and 'Ook!' are valid tokens. Named after the Librarian from Terry Pratchett's Discworld who only says 'Ook!'. Demonstrates that even Brainfuck can be more obscure. Part of Morgan-Mar's exploration of code as creative expression.",
+                bio: "Morgan-Mar strikes again! Ook! is Brainfuck for orangutans, only 'Ook.', 'Ook?', and 'Ook!' are valid tokens. Named after the Librarian from Terry Pratchett's Discworld who only says 'Ook!'. Demonstrates that even Brainfuck can be more obscure. Part of Morgan-Mar's exploration of code as creative expression.",
                 sources: [
                     { title: "Esolang: Ook!", url: "https://esolangs.org/wiki/Ook!", type: "encyclopedia" }
                 ]
@@ -2979,7 +2979,7 @@ Ook! Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
 Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook!
 Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook.`,
         filename: "hello.ook",
-        description: "Brainfuck for orangutans. Ook! uses only 'Ook.', 'Ook?', and 'Ook!'—a tribute to Terry Pratchett's Librarian.",
+        description: "Brainfuck for orangutans. Ook! uses only 'Ook.', 'Ook?', and 'Ook!', a tribute to Terry Pratchett's Librarian.",
         influences: ["Brainfuck"],
         influenced: []
     },
@@ -2990,7 +2990,7 @@ Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook.`,
             {
                 name: "Theo Weidmann",
                 org: "",
-                bio: "German developer who created Emojicode as a full-featured object-oriented language using only emoji. Classes, methods, variables—all emoji. Compiles to bytecode and runs on its own VM. Demonstrates that Unicode opens new possibilities for programming syntax. Actively developed with serious language features despite playful appearance.",
+                bio: "German developer who created Emojicode as a full-featured object-oriented language using only emoji. Classes, methods, variables, all emoji. Compiles to bytecode and runs on its own VM. Demonstrates that Unicode opens new possibilities for programming syntax. Actively developed with serious language features despite playful appearance.",
                 sources: [
                     { title: "Emojicode official site", url: "https://www.emojicode.org/", type: "official" }
                 ]
@@ -3001,7 +3001,7 @@ Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook.`,
   😀 🔤Hello, World!🔤❗️
 🍉`,
         filename: "hello.emojic",
-        description: "Programming in pure emoji. Emojicode is a full OOP language where 🏁 starts main and 😀 prints—seriously functional!",
+        description: "Programming in pure emoji. Emojicode is a full OOP language where 🏁 starts main and 😀 prints, seriously functional!",
         influences: [],
         influenced: []
     },
@@ -3029,7 +3029,7 @@ Moo Moo Moo Moo Moo Moo Moo Moo Moo Moo Moo Moo Moo Moo MoO MoO
 MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO
 MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
         filename: "hello.cow",
-        description: "Only 'moo' variants allowed. Cow proves bovines can compute too—eight moo combinations create any program.",
+        description: "Only 'moo' variants allowed. Cow proves bovines can compute too, eight moo combinations create any program.",
         influences: [],
         influenced: []
     },
@@ -3064,7 +3064,7 @@ MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
             {
                 name: "David Morgan-Mar",
                 org: "",
-                bio: "Australian programmer who created Whenever, a non-deterministic language where statement order doesn't matter—the interpreter executes them 'whenever' it wants. A prolific designer of esoteric languages, he also created Piet, Chef, and Ook!, exploring code as creative expression.",
+                bio: "Australian programmer who created Whenever, a non-deterministic language where statement order doesn't matter, the interpreter executes them 'whenever' it wants. A prolific designer of esoteric languages, he also created Piet, Chef, and Ook!, exploring code as creative expression.",
                 sources: [
                     { title: "Esolang: Whenever", url: "https://esolangs.org/wiki/Whenever", type: "encyclopedia" }
                 ]
@@ -3073,7 +3073,7 @@ MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
         tags: ["esoteric", "scripting"],
         code: `1 print("Hello, World!");`,
         filename: "hello.whenever",
-        description: "Time is negotiable. Whenever executes statements in random order—your code runs whenever it feels like it.",
+        description: "Time is negotiable. Whenever executes statements in random order, your code runs whenever it feels like it.",
         influences: [],
         influenced: []
     },
@@ -3104,7 +3104,7 @@ MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MoO MOo MOo MOo`,
             {
                 name: "Carl Sassenrath",
                 org: "",
-                bio: "Created Rebol (Relative Expression Based Object Language) for distributed computing and messaging. Sassenrath previously designed the Amiga OS kernel. Rebol uses dialects—embedded domain-specific languages. Influenced modern data exchange formats. Open-sourced in 2012. Spawned Red language as spiritual successor.",
+                bio: "Created Rebol (Relative Expression Based Object Language) for distributed computing and messaging. Sassenrath previously designed the Amiga OS kernel. Rebol uses dialects, embedded domain-specific languages. Influenced modern data exchange formats. Open-sourced in 2012. Spawned Red language as spiritual successor.",
                 sources: [
                     { title: "Wikipedia: Carl Sassenrath", url: "https://en.wikipedia.org/wiki/Carl_Sassenrath", type: "encyclopedia" }
                 ]
@@ -3198,7 +3198,7 @@ print "Hello, World!"`,
         tags: ["scripting"],
         code: `System.print("Hello, World!")`,
         filename: "hello.wren",
-        description: "Scripting perfected. Wren is small, fast, and embeddable—designed by the author of 'Crafting Interpreters' for game engines.",
+        description: "Scripting perfected. Wren is small, fast, and embeddable, designed by the author of 'Crafting Interpreters' for game engines.",
         influences: ["Lua", "Smalltalk"],
         influenced: []
     },
@@ -3264,7 +3264,7 @@ fn Main() -> i32 {
     return 0;
 }`,
         filename: "hello.carbon",
-        description: "C++'s modern successor. Google's Carbon aims to be what TypeScript is to JavaScript—gradual evolution with full interop.",
+        description: "C++'s modern successor. Google's Carbon aims to be what TypeScript is to JavaScript, gradual evolution with full interop.",
         influences: ["C++", "Rust"],
         influenced: []
     },
@@ -3335,7 +3335,7 @@ main =
         code: `def main():
   return "Hello, World!"`,
         filename: "hello.bend",
-        description: "Massively parallel functional. Bend automatically runs on GPUs with thousands of cores—write pure functions, get parallelism free.",
+        description: "Massively parallel functional. Bend automatically runs on GPUs with thousands of cores, write pure functions, get parallelism free.",
         influences: ["Haskell"],
         influenced: []
     },
@@ -3398,7 +3398,7 @@ main :: proc() {
         code: `main : '{IO, Exception} ()
 main _ = printLine "Hello, World!"`,
         filename: "hello.u",
-        description: "Content-addressed revolution. Unison identifies code by hash, not location—refactor fearlessly, distribute effortlessly.",
+        description: "Content-addressed revolution. Unison identifies code by hash, not location, refactor fearlessly, distribute effortlessly.",
         influences: ["Haskell", "Elm"],
         influenced: []
     },
@@ -3420,7 +3420,7 @@ main _ = printLine "Hello, World!"`,
   put list ('Hello, World!');
 end Hello;`,
         filename: "hello.pli",
-        description: "The grand unifier. PL/I tried to be everything to everyone—merging Fortran's math and COBOL's business roots—and pioneered exceptions and pointers along the way.",
+        description: "The grand unifier. PL/I tried to be everything to everyone, merging Fortran's math and COBOL's business roots, and pioneered exceptions and pointers along the way.",
         influences: ["Fortran", "COBOL", "ALGOL"],
         influenced: ["C", "Pascal"]
     },
