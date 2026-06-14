@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Languages](https://img.shields.io/badge/languages-128-gold.svg)
-![Binary](https://img.shields.io/badge/book-10000000%20ways-brightgreen.svg)
+![Binary](https://img.shields.io/badge/0b10000000-128%20languages-brightgreen.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 ## 10000000 Ways to Say Hello
@@ -20,7 +20,7 @@ helloworlds.io celebrates the universal tradition of "Hello, World!"—the first
 
 ### Features
 
-🎊 **128 Programming Languages** (`0b10000000`)—the exact binary milestone the book is named for  
+🎊 **128 Programming Languages** (`0b10000000`)—exactly the binary milestone that gives the project its name  
 🎁 **Perfect gift** for the programmer in your life  
 🏆 **Complete Timeline** - From Assembly (1949) to Bend (2024)  
 🌟 **Every Era** - Including 2019-2025 modern languages (Mojo, Carbon, Gleam, Roc, Bend, Odin, Unison)  
@@ -252,9 +252,9 @@ helloworlds.io is designed with several principles:
 
 ### 📊 Current Collection
 
-**Website: 128 languages** = `0b10000000` = **10000000 Ways to Say Hello**
+**128 languages** = `0b10000000` = **10000000 Ways to Say Hello**
 
-*Exactly 128 languages—because every programmer will smile at that binary joke. The website and the book share the same curated collection.*
+*Exactly 128 languages—because every programmer will smile at that binary joke.*
 
 ### 🆕 Latest Additions (2019-2025)
 
